@@ -4,17 +4,21 @@
   height: 50px;
 }
 
+.main-header .logo .logo-lg {
+  max-width: 50px;
+}
+
 .sidebar-mini.sidebar-collapse .block-main-header .logo>.logo-mini {
   font-size: 0;
 }
 
-.block-main-header .main-header .logo,
-.block-main-header .main-header .logo:hover {
+.block-main-header.main-header .logo,
+.block-main-header.main-header .logo:hover {
   background-color: #FF0000;
 }
 
-.block-main-header .main-header .navbar,
-.block-main-header .main-header .navbar .sidebar-toggle:hover {
+.block-main-header.main-header .navbar,
+.block-main-header.main-header .navbar .sidebar-toggle:hover {
   background-color: #FF6969;
 }
 
@@ -36,8 +40,9 @@
   padding: 8px 5px 8px 15px;
 }
 
-.skin-red-light .block-menu>li>a {
+.skin-red-light .block-menu>li>a.center-text-cus  {
   border-left: none;
+  font-size: 16px;
   padding: 11px 5px 11px 15px
 }
 
@@ -76,10 +81,6 @@ li.treeview_new {
 }
 
 .block-new-form-top {
-  float: left;
-  width: 100%;
-  border-radius: 5px;
-  text-align: center;
   padding: 15px;
 }
 
@@ -207,6 +208,7 @@ li.treeview_new {
 }
 .block-pagkage .bg-trun {
   background-color: transparent !important;
+  border-top: none;
 }
 .block-pagkage .boxView {
   border-radius: 5px;
