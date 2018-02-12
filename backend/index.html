@@ -7,24 +7,24 @@
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.7 -->
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
         <!-- Ionicons -->
-        <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+        <link rel="stylesheet" href="plugins/Ionicons/css/ionicons.min.css">
         <!-- Theme style -->
         <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
         <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
         <!-- Morris chart -->
-        <link rel="stylesheet" href="bower_components/morris.js/morris.css">
+        <link rel="stylesheet" href="plugins/morris.js/morris.css">
         <!-- jvectormap -->
-        <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+        <!-- <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap.css"> -->
         <!-- Date Picker -->
-        <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+        <link rel="stylesheet" href="plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
         <!-- Daterange picker -->
-        <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
-        <!-- bootstrap wysihtml5 - text editor -->
+        <link rel="stylesheet" href="plugins/bootstrap-daterangepicker/daterangepicker.css">
+        <!-- Bootstrap wysihtml5 - text editor -->
         <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
         <link rel="stylesheet" href="plugins/animate/animate.css">
         <!-- Style CSS -->
@@ -38,19 +38,17 @@
         <!-- Google Font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     </head>
+
     <body class="hold-transition skin-red-light sidebar-mini">
         <div class="wrapper">
             <header class="main-header block-main-header">
-                <!-- Logo -->
-                <a href="https://secure.businessbnc.com/" class="logo">
+                <a href="#" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <span class="logo-mini"><img src="dist/img/logo-secure-2017-10-22.png"></span>
                     <!-- logo for regular state and mobile devices -->
                     <span class="logo-lg"><img src="dist/img/logo-secure-2017-10-22.png"></span>
-                </a>
-                <!-- Header Navbar: style can be found in header.less -->
+                </a><!-- ./logo -->
                 <nav class="navbar navbar-static-top">
-                    <!-- Sidebar toggle button-->
                     <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                     <span class="sr-only">Toggle navigation</span>
                     </a>
@@ -82,50 +80,50 @@
                             .navbar-nav>.user-menu .user-image{width: 45px;height: 45px;margin-top: -12px;margin-right:5px;}
                         </style>
                     </div>
-                </nav>
+                </nav><!-- /.navbar navbar-static-top -->
             </header><!-- /.main-header -->
             
             <aside class="main-sidebar">
                 <section class="sidebar">
-                    <ul class="sidebar-menu" data-widget="tree">
+                    <ul class="sidebar-menu block-menu" data-widget="tree">
                         <li class="treeview active">
-                            <a href="https://adminlte.io/docs">
+                            <a href="#">
                                 <i class="fa fa-dashboard  text-menu-cus"></i>
                                 <span> Dashboard</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="https://adminlte.io/docs">
+                            <a href="#">
                                 <i class="fa fa-sitemap  text-menu-cus"></i>
                                 <span> Member</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="https://adminlte.io/docs">
+                            <a href="#">
                                 <i class="fa fa-exchange  text-menu-cus"></i>
                                 <span> Transaction</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="https://adminlte.io/docs">
+                            <a href="#">
                                 <i class="fa fa-user  text-menu-cus"></i>
                                 <span>Documentation</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="https://adminlte.io/docs">
+                            <a href="#">
                                 <i class="fa fa-book"></i>
                                 <span> Change info</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="https://adminlte.io/docs">
+                            <a href="#">
                                 <i class="fa fa-money  text-menu-cus"></i>
                                 <span> Deposit</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="https://adminlte.io/docs">
+                            <a href="#">
                                 <i class="fa fa-history  text-menu-cus"></i>
                                 <span> Transaction history</span>
                             </a>
@@ -135,9 +133,33 @@
                                 <span>JUNIOR MANAGER</span>
                             </a>
                         </li>
+                        <li class="treeview treeview_new">
+                            <a class="center-text-cus ">
+                                <span>MANAGER</span>
+                            </a>
+                        </li>
+                        <li class="treeview treeview_new">
+                            <a class="center-text-cus ">
+                                <span>DIRECTOR</span>
+                            </a>
+                        </li>
+                        <li class="treeview treeview_new">
+                            <a class="center-text-cus ">
+                                <span>MANAGING DIRECTOR</span>
+                            </a>
+                        </li>
+                        <li class="treeview treeview_new">
+                            <a class="center-text-cus ">
+                                <span>SHAREHOLDER</span>
+                            </a>
+                        </li>
+                        <li class="treeview treeview_new">
+                            <a class="center-text-cus ">
+                                <span>MANAGEMENT COUNCIL</span>
+                            </a>
+                        </li>
                     </ul>
-                </section>
-                <!-- /.sidebar -->
+                </section><!-- /.sidebar -->
             </aside><!-- /.main-sidebar -->
 
             <div class="content-wrapper">
@@ -229,9 +251,9 @@
 
                         <div class="block-pagkage">
                             <div class="row">
-                                <div class="col-md-6 col-sm-12 block-pagkage-child">
+                                <div class="col-md-6 col-sm-12">
                                     <div class="bodybox  box-widget widget-user ">
-                                        <div class="box-footer bg-trun no-padding">
+                                        <div class="box-footer bg-trun no-padding row">
                                             <div class="col-sm-6">
                                                 <div class="boxView blurred-bg tinted">
                                                     <div class="contentView">
@@ -300,7 +322,7 @@
                                     </div>
                                     <div class="col-xs-6">
                                         <div class="row">
-                                            <div class="small-box bg-red bg-yellow-red">
+                                            <div class="small-box bg-red bg-red-top">
                                                 <div class="inner">
                                                     <h3 class="text-white">24.6305</h3>
                                                     <p class="text-white">BNC</p>
@@ -314,7 +336,7 @@
                                     </div>
                                     <div class="col-xs-6">
                                         <div class="row">
-                                            <div class="small-box bg-primary bg-yellow-primary">
+                                            <div class="small-box bg-primary bg-primary-bot">
                                                 <div class="inner">
                                                     <h3 class="text-white">$ 280</h3>
                                                     <p class="text-white">Daily profits</p>
@@ -328,7 +350,7 @@
                                     </div>
                                     <div class="col-xs-6">
                                         <div class="row">
-                                            <div class="small-box bg-aqua-cus bg-yellow-cus">
+                                            <div class="small-box bg-aqua-cus bg-aqua-bot">
                                                 <div class="inner">
                                                     <h3 class="text-white">$ 3130</h3>
                                                     <p class="text-white">Transaction money</p>
@@ -345,6 +367,121 @@
                                     </div>
                                 </div>
                             </div>
+                        </div><!-- /.block-pagkage -->
+
+                        <div class="block-chart-deals">
+                            <div class="row">
+                                <div class="bcol-xs-6 col-sm-6">
+                                    <div class="block-chart">
+                                        <div class="box-header">
+                                            <i class="fa fa-th"></i>
+                                            <h3 class="box-title">BNCCoin chart</h3>
+                                        </div>
+                                        <div class="box-body border-radius-none">
+                                            <div class="chart" id="line-chart" style="height: 250px;"></div>
+                                        </div>
+                                        <div class="box-footer no-border">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center">
+                                                    <h3 class="text-blue font-24">5.1363 USD </h3>
+                                                    <div class="knob-label">Sell</div>
+                                                </div>
+                                                <div class="col-xs-6 text-center">
+                                                    <h3 class="text-blue font-24">4.62267 USD </h3>
+                                                    <div class="knob-label">Buy</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.block-chart -->
+                                <div class="col-xs-6 col-sm-6">
+                                    <div class="block-lasted">
+                                        <div class="box box-primary">
+                                            <div class="box-header">
+                                                <h3 class="box-title">Latest deals</h3>
+                                            </div>
+                                            <div class="box-body table-responsive">
+                                                <div class="listtransaction">
+                                                     <table id="ticker" class="table table-striped">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><a href="#">33149015</a></td>
+                                                                <td><a href="#" target="_blank">fa42de2b9457874647b1f913b61780...</a></td>
+                                                                <td>1 minute ago</td>
+                                                                <td class="text-center">
+                                                                    <button class="btn btn-success cb price-BEC" style="width:100%">
+                                                                    <span data-c="1.5110"> 21.511 BNC</span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#">33149014</a></td>
+                                                                <td><a href="#" target="_blank">a5b2de5d09153d7e492b919ac8b474...</a></td>
+                                                                <td>1 minute ago</td>
+                                                                <td class="text-center">
+                                                                    <button class="btn btn-success cb price-BNC" style="width:100%">
+                                                                    <span data-c="0.6975"> 20.351 BNC</span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#">33149013</a></td>
+                                                                <td><a href="#" target="_blank">ad18ea2e39a350076840b416719d24...</a></td>
+                                                                <td>1 minute ago</td>
+                                                                <td class="text-center">
+                                                                    <button class="btn btn-success cb price-BNC" style="width:100%">
+                                                                    <span data-c="0.0138"> 35.007 BNC</span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#">33149012</a></td>
+                                                                <td><a href="#" target="_blank">edd70a0a4cca844a64da6ad2dccfc5...</a></td>
+                                                                <td>2 minutes ago</td>
+                                                                <td class="text-center">
+                                                                    <button class="btn btn-success cb price-BNC" style="width:100%">
+                                                                    <span data-c="0.0246"> 87.000 BNC</span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#">33149011</a></td>
+                                                                <td><a href="#" target="_blank">23ccbbbf2c4f6a711222217e9ce82f...</a></td>
+                                                                <td>2 minutes ago</td>
+                                                                <td class="text-center">
+                                                                    <button class="btn btn-success cb price-BNC" style="width:100%">
+                                                                    <span data-c="0.0043"> 56.054 BNC</span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#">33149010</a></td>
+                                                                <td><a href="#" target="_blank">df3edd3f43841ac4026741dca7b503...</a></td>
+                                                                <td>4 minutes ago</td>
+                                                                <td class="text-center">
+                                                                    <button class="btn btn-success cb price-BNC" style="width:100%">
+                                                                    <span data-c="0.7027"> 20.356 BNC</span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#">33149009</a></td>
+                                                                <td><a href="#" target="_blank">cdc1fBNC2de39307c09c8d8193c5bd...</a></td>
+                                                                <td>3 minutes ago</td>
+                                                                <td class="text-center">
+                                                                    <button class="btn btn-success cb price-BNC" style="width:100%">
+                                                                    <span data-c="2.8937"> 2.894 BNC</span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                     </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div><!-- /.block-lasted -->
+                            </div>
                         </div>
                     </div>
                 </section><!-- /.content -->
@@ -353,46 +490,167 @@
             <footer class="main-footer">
                 <strong>Copyright &copy; 2017 <a href="#">Business Coin</a>.</strong> All rights
                 reserved.
-            </footer>
+            </footer><!-- /.main-footer -->
 
         </div>
         <!-- ./wrapper -->
+
         <!-- jQuery 3 -->
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="plugins/jquery/dist/jquery.min.js"></script>
         <!-- jQuery UI 1.11.4 -->
-        <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-        <script>
-            $.widget.bridge('uibutton', $.ui.button);
-        </script>
+        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
         <!-- Bootstrap 3.3.7 -->
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- Morris.js charts -->
-        <script src="bower_components/raphael/raphael.min.js"></script>
-        <script src="bower_components/morris.js/morris.min.js"></script>
+        <script src="plugins/raphael/raphael.min.js"></script>
+        <script src="plugins/morris.js/morris.min.js"></script>
         <!-- Sparkline -->
-        <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+        <script src="plugins/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
         <!-- jvectormap -->
         <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
         <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
         <!-- jQuery Knob Chart -->
-        <script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
-        <!-- daterangepicker -->
-        <script src="bower_components/moment/min/moment.min.js"></script>
-        <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-        <!-- datepicker -->
-        <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="plugins/jquery-knob/dist/jquery.knob.min.js"></script>
+        <!-- Daterangepicker -->
+        <script src="plugins/moment/min/moment.min.js"></script>
+        <script src="plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <!-- Datepicker -->
+        <script src="plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
         <!-- Bootstrap WYSIHTML5 -->
         <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
         <!-- Slimscroll -->
-        <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
         <!-- FastClick -->
-        <script src="bower_components/fastclick/lib/fastclick.js"></script>
+        <script src="plugins/fastclick/lib/fastclick.js"></script>
         <!-- AdminLTE App -->
         <script src="dist/js/adminlte.min.js"></script>
-        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="dist/js/pages/dashboard.js"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="dist/js/demo.js"></script>
+        <!-- Loader -->
+        <script src="plugins/loader/loader.js"></script>
+
+        <!-- Latest deals -->
+        <script>
+            function tick() {
+                $('#ticker tr:first').slideUp(function () { $(this).appendTo($('#ticker')).slideDown(); });
+            }
+            setInterval(function () { tick() }, 500);
+        </script>
+        <!-- Chart -->   
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+
+          function drawChart() {
+                        var data = google.visualization.arrayToDataTable([
+                ['Year', 'Buy', 'Sell'],
+                                    ['2017-11-07',  0.270389,      0.310948],
+                                    ['2017-11-07',  0.270391,      0.31095],
+                                    ['2017-11-07',  0.270393,      0.310952],
+                                    ['2017-11-07',  0.270395,      0.310954],
+                                    ['2017-11-07',  0.270397,      0.310956],
+                                    ['2017-11-07',  0.271121,      0.31179],
+                                    ['2017-11-07',  0.271846,      0.312623],
+                                    ['2017-11-07',  0.272571,      0.313456],
+                                    ['2017-11-07',  0.272572,      0.313458],
+                                    ['2017-11-07',  0.272574,      0.31346],
+                                    ['2017-11-07',  0.272576,      0.313462],
+                                    ['2017-11-07',  0.272578,      0.313465],
+                                    ['2017-11-07',  0.27258,      0.313467],
+                                    ['2017-11-07',  0.273304,      0.3143],
+                                    ['2017-11-07',  0.274029,      0.315133],
+                                    ['2017-11-07',  0.274754,      0.315967],
+                                    ['2017-11-07',  0.274755,      0.315969],
+                                    ['2017-11-07',  0.274757,      0.315971],
+                                    ['2017-11-07',  0.274759,      0.315973],
+                                    ['2017-11-07',  0.274761,      0.315975],
+                                    ['2017-11-07',  0.274768,      0.315983],
+                                    ['2017-11-07',  0.274775,      0.315992],
+                                    ['2017-11-07',  0.274783,      0.316],
+                                    ['2017-11-07',  0.274819,      0.316042],
+                                    ['2017-11-07',  0.274821,      0.316044],
+                                    ['2017-11-07',  0.274839,      0.316065],
+                                    ['2017-11-07',  0.275563,      0.316898],
+                                    ['2017-11-07',  0.276288,      0.317731],
+                                    ['2017-11-07',  0.277013,      0.318565],
+                                    ['2017-11-07',  0.277737,      0.319398],
+                                    ['2017-11-07',  0.278462,      0.320231],
+                                    ['2017-11-07',  0.279187,      0.321065],
+                                    ['2017-11-07',  0.279911,      0.321898],
+                                    ['2017-11-07',  0.280636,      0.322731],
+                                    ['2017-11-07',  0.281361,      0.323565],
+                                    ['2017-11-07',  0.282085,      0.324398],
+                                    ['2017-11-07',  0.28281,      0.325231],
+                                    ['2017-11-07',  0.283534,      0.326065],
+                                    ['2017-11-07',  0.284259,      0.326898],
+                                    ['2017-11-07',  0.284984,      0.327731],
+                                    ['2017-11-07',  0.285708,      0.328565],
+                                    ['2017-11-07',  0.286433,      0.329398],
+                                    ['2017-11-07',  0.287158,      0.330231],
+                                    ['2017-11-07',  0.287882,      0.331065],
+                                    ['2017-11-07',  0.288607,      0.331898],
+                                    ['2017-11-07',  0.289332,      0.332731],
+                                    ['2017-11-07',  0.290056,      0.333565],
+                                    ['2017-11-07',  0.290058,      0.333567],
+                                    ['2017-11-07',  0.29006,      0.333569],
+                                    ['2017-11-07',  0.290067,      0.333577],
+                                    ['2017-11-07',  0.290074,      0.333585],
+                                    ['2017-11-07',  0.290082,      0.333594],
+                                    ['2017-11-07',  0.290083,      0.333596],
+                                    ['2017-11-07',  0.290085,      0.333598],
+                                    ['2017-11-07',  0.290087,      0.3336],
+                                    ['2017-11-07',  0.290089,      0.333602],
+                                    ['2017-11-07',  0.290091,      0.333604],
+                                    ['2017-11-07',  0.290098,      0.333613],
+                                    ['2017-11-07',  0.290105,      0.333621],
+                                    ['2017-11-07',  0.290123,      0.333642],
+                                    ['2017-11-07',  0.29013,      0.33365],
+                                    ['2017-11-07',  0.290138,      0.333658],
+                                    ['2017-11-07',  0.290156,      0.333679],
+                                    ['2017-11-07',  0.290163,      0.333688],
+                                    ['2017-11-07',  0.29017,      0.333696],
+                                    ['2017-11-07',  0.290178,      0.333704],
+                                    ['2017-11-07',  0.290185,      0.333712],
+                                    ['2017-11-07',  0.290192,      0.333721],
+                                    ['2017-11-07',  0.290199,      0.333729],
+                                    ['2017-11-07',  0.290207,      0.333737],
+                                    ['2017-11-07',  0.290208,      0.33374],
+                                    ['2017-11-07',  0.29021,      0.333742],
+                                    ['2017-11-07',  0.290212,      0.333744],
+                                    ['2017-11-07',  0.290219,      0.333752],
+                                    ['2017-11-07',  0.290221,      0.333754],
+                                    ['2017-11-07',  0.290223,      0.333756],
+                                    ['2017-11-07',  0.290225,      0.333758],
+                                    ['2017-11-07',  0.290226,      0.33376],
+                                    ['2017-11-07',  0.290228,      0.333762],
+                                    ['2017-11-07',  0.29023,      0.333765],
+                                    ['2017-11-07',  0.290237,      0.333773],
+                                    ['2017-11-07',  0.290245,      0.333781],
+                                    ['2017-11-07',  0.290252,      0.33379],
+                                    ['2017-11-07',  0.290254,      0.333792],
+                                    ['2017-11-07',  0.290255,      0.333794],
+                                    ['2017-11-07',  0.290263,      0.333802],
+                                    ['2017-11-07',  0.290264,      0.333804],
+                                    ['2017-11-07',  0.290266,      0.333806],
+                                    ['2017-11-07',  0.290268,      0.333808],
+                                    ['2017-11-07',  0.290286,      0.333829],
+                                    ['2017-11-07',  0.290293,      0.333838],
+                                    ['2017-11-08',  0.288607,      0.331898],
+                                    ['2017-11-22',  0.6228,      0.692],
+                                    ['2017-11-24',  1,      1.1],
+                                    ['2017-12-04',  1.359,      1.51],
+                                    ['2017-12-07',  1.773,      1.97],
+                                    ['2017-12-11',  1.827,      2.03],
+                                    ['2018-01-08',  2.4192,      2.688],
+                                    ['2018-01-15',  2.92851,      3.2539],
+                                    ['2018-01-23',  4.62267,      5.1363],
+                            ]);
+
+            var options = {
+              curveType: 'function',
+              legend: { position: 'bottom' }
+            };
+            var chart = new google.visualization.LineChart(document.getElementById('line-chart'));
+            chart.draw(data, options);
+          }
+        </script>
     </body>
 </html>
