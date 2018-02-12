@@ -1,0 +1,485 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*==========*/
+/*  
+  [Let press Ctrl + f and type of paste the key, then press Enter to search the content ] Title
+  Example : You want Import Files => Title is Import Files, or Fonts => Title is Fonts
+
+  1.Import Files
+    1.1 Fonts
+    1.2 Css
+  2. Layout Style
+  3. General
+    3.1 Header
+    3.2 Logo
+    3.3 Search
+    3.4 User Account
+    3.5 Cart
+    3.6 Top Bar
+    3.6 Button
+    3.6 Back To Top
+    3.6 Preloader
+    3.6 Pagination
+    3.6 Video
+  4. Home Page
+    4.1 Page Home
+  5. Menu
+    5.1mega-menu
+  6. Socials
+  7. SLIDER
+  8. Banners
+  9. Product Home
+    9.1 Product Home Title
+    9.2 Product Home Tabs
+    9.3 Product Home Button Owls
+    9.4 Product Image, Info
+    9.5 Hot Deals
+    9.6 Max Your Style
+  10. Core Feature
+  11. LOAD MORE PRODUCTS
+  12. News Home
+    12.1 Latest From Blog
+  13. Contact Info Home
+  14. Home About Us
+  15. Categories Menu
+  16. Get In Touch
+  17. Newsletter
+  18. Brands
+  19. Instagram
+  20. Policies
+  21. Categories Images
+  22. Promotion
+  23. Testimonials
+  24. Copyright & Payments
+  25. Tags
+  26. Page Products
+    26.1 Controller
+    26.1 Category Image
+  27. Sidebar
+    27.1 Price
+    27.2 Color
+    27.3 Search
+    27.4 Recent Post
+  28. Page Products Details
+    28.1 Products Details
+    28.2 Tab Products Details
+    28.3 Image Products Sidebar
+    28.4 Product_Detail_v2
+    28.5 Related Products
+  29. Page About
+    29.1 Page About Testimonials
+    29.2Page About Our Team
+  30.CONTACT
+  31. Page Products
+    31.1 Category
+    31.2 Products Listing
+  32. Page Blog
+    32.1 Blog
+    32.2 Blog jumbotron
+  33. Page Blog Details
+    33.1 Blog Details
+  34. Page 404
+  35. Footer
+  
+/*==========*/
+
+/*===== Import Files =====*/
+/* Fonts */
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&subset=latin-ext,vietnamese';
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,700i,900&subset=latin-ext');
+/*  Css */
+@import url(../lib/bootstrap/bootstrap.min.css);
+@import url(../lib/carousel/owl.carousel.min.css);
+@import url(../lib/awesome/font-awesome.min.css);
+@import url(../lib/animate/animate.min.css);
+@import url(../lib/mmenu/jquery.mmenu.all.css);
+
+/*===== Layout Style =====*/
+body {}
+
+a { color: #252525; cursor: pointer; }
+a:hover,
+a:focus {
+  color: #707070;
+  /*text-decoration: none;*/
+  transition: all 0.25s;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+select:focus, button:focus, input:focus { outline: none; }
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea, select, input[type="number"],
+input[type="tel"] {
+  padding: 8px 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul li,
+ol li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: inherit;
+}
+.clearfix {
+  clear: both;
+}
+.block {
+  margin-bottom: 10px;
+}
+.block:before,
+.block:after {
+  content: "";
+  display: table;
+}
+.block:after {
+  clear: both;
+}
+.wrapper {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+/*===== Header =====*/
+.block-header-mobile {
+  float: left;
+  background: #fff;
+  display: none;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+.block-header-mobile .mmmenua {
+  background: center center no-repeat transparent;
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 0;
+  left: 0px;
+  text-align: center;
+  z-index: 1000;
+}
+.block-header-mobile .mmmenua i {
+  font-size: 25px;
+  color: #009EBB;
+  padding-top: 8px;
+}
+
+.block-header-desktop {
+  background: #FF0000;
+  padding: 20px 0px;
+  position: static;
+  top: -100px;
+}
+.block-header-desktop .container {
+  position: relative;
+}
+.logo-header {
+  position: absolute;
+  left: 0px;
+  top: -15px;
+  z-index: 999;
+}
+.logo, .title-logo {
+  display: table-cell;
+  vertical-align: middle;
+}
+.logo-header img {
+  height: 50px;
+}
+.title-logo p {
+  margin: 0px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.block-header-desktop ul {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  list-style: none;
+  float: initial;
+}
+.block-header-desktop .navbar-nav>li {
+  float: initial;
+  display: inline-block;
+}
+.block-header-desktop .navbar-nav>li>a {
+  padding: 0px 30px;
+  color: #fff;
+}
+
+.login-member {
+  position: absolute;
+  right: 70px;
+}
+.login-member a {
+  padding: 5px 15px;
+  background: #2ECC71;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.language {
+  position: absolute;
+  top: -2px;
+  right: 0px;
+}
+
+.sticky-wrapper.is-sticky .block-header-fixed {
+  z-index: 99;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+/*===== Slide =====*/
+.block-slider {
+  position: relative;
+  overflow: hidden;
+}
+.block-slider .owl-carousel .owl-nav .owl-next,
+.block-slider .owl-carousel .owl-nav .owl-prev {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  background: #6C6A6A;
+  border-radius: 100%;
+}
+
+.block-slider .owl-carousel .owl-nav .owl-next {
+  right: -40px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.block-slider .owl-carousel .owl-nav .owl-prev {
+  left: -40px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.block-slider:hover .owl-carousel .owl-nav .owl-next {
+  right: 10px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.block-slider:hover .owl-carousel .owl-nav .owl-prev {
+  left: 10px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.block-slider .owl-carousel .owl-nav .owl-next i,
+.block-slider .owl-carousel .owl-nav .owl-prev i {
+  color: #fff;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.block-slider .owl-dots {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.block-slider .owl-dots .owl-dot {
+  display: inline-block;
+  background: #666;
+  text-indent: -9999px; 
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.block-slider .owl-dots .owl-dot:hover,
+.block-slider .owl-dots .owl-dot.active {
+  background: #fff;
+}
+
+/*===== block title =====*/
+.block-title .title-sec {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #276271;
+  margin-bottom: 10px
+}
+
+/*===== Parallax =====*/
+.block-parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: table;
+  width: 100%;
+}
+
+/*===== Section About Us =====*/
+.block-aboutus .block-parallax-img {
+  background-image: url(../images/parallax/meta-trader-4-standard-1501992848-1508778680.jpg);
+}
+.block-aboutus .block-content {
+  background: rgba(0,0,0,0.5);
+  padding: 10px 0;
+}
+.block-aboutus .block-content p {
+  margin-bottom: 10px;
+  color: #fff;
+}
+.block-aboutus .block-content ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 40px
+}
+.block-aboutus .block-content ul li {
+  list-style-type: disc;
+  color: #fff;
+}
+
+/* Section Why Trade Us */
+.block-whytrade .block-content {
+  padding: 30px 0;
+}
+.block-whytrade .block-parallax-img {
+  background-image: url(../images/parallax/background-home-1508779221.jpg);
+}
+.block-whytrade img {
+  width: 100%;
+}
+
+/*===== Section News Home =====*/
+.news-home {
+  margin-bottom: 20px;
+}
+.news-home:nth-child(2n+1) {
+  clear: both;
+}
+.news-home h2 {
+  font-size: 15px;
+  margin: 5px 0px;
+  font-weight: 600;
+  color: #333;
+}
+
+/*===== Footer =====*/
+footer {
+  padding: 10px 0px;
+  background: #22313F;
+  color: #fff;
+  text-align: right;
+}
+footer .nav-link-footer li {
+  display: inline-block;
+  margin: 0 10px;
+}
+footer .nav-link-footer li a, footer .nav-link-footer li a:hover {
+  color: #fff;
+}
+footer .block-social a:hover {
+  text-decoration: none;
+}
+footer .block-social i {
+  color: #fff;
+  font-size: 18px!important;
+  margin: 0px 15px;
+  margin-top: 3px;
+}
+
+/*===== Back To Top =====*/
+.td-scroll-up {
+  cursor: pointer;
+  position: fixed;
+  bottom: 4px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  z-index: 1;
+  transform: translate3d(0, 70px, 0);
+  -webkit-transform: translate3d(0, 70px, 0);
+  -moz-transform: translate3d(0, 70px, 0);
+  -ms-transform: translate3d(0, 70px, 0);
+  -o-transform: translate3d(0, 70px, 0);
+  -webkit-transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+  -moz-transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+  -o-transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+  transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+}
+.td-scroll-up-visible {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+}
+.td-scroll-up i {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  width: 40px;
+  top: 7px;
+}
+.td-scroll-up:hover {
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.td-scroll-up:focus {
+  text-decoration: none;
+}
