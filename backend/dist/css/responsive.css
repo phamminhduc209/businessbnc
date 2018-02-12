@@ -32,3 +32,9 @@
     margin-bottom: 10px;
   }
 }
+
+@media (max-width: 480px) {
+  .new-form-bottom .new-form-content span {
+    font-size: 20px;
+  }
+}
