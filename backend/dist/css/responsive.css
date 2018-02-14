@@ -37,4 +37,13 @@
   .new-form-bottom .new-form-content span {
     font-size: 20px;
   }
+  .signin_wrapper .block-side-right {
+    width: 320px;
+  }
+}
+
+@media (max-width: 320px) {
+  .signin_wrapper .block-side-right {
+    width: 300px;
+  }
 }
