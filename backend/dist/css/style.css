@@ -334,3 +334,208 @@ li.treeview_new {
   height: 335px;
   overflow: hidden;
 }
+
+/* Page Login */
+.signin_wrapper {
+  background: url(../img/lock.jpg);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-position: 50% 50% !important;
+}
+.form-login .signup-heading {
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 50%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.signin_wrapper .block-side-right {
+  position: fixed;
+  width: 535px;
+  right: 0;
+  background: rgba(0, 9, 22, 0.8);
+  padding: 0px 40px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.clearfix {
+  clear: both;
+}
+
+.form-login .block-input .effect-focus {
+  line-height: 25px;
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  outline: none;
+  height: 43px;
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+}
+.form-login .block-input .block-icon {
+  float: left;
+  width: 35px;
+}
+.form-login .block-input .block-icon .prefix {
+  color: #fff;
+  font-size: 30px;
+}
+.form-login .block-input .block-wrap-input {
+  position: relative;
+  float: left;
+  width: calc(100% - 35px);
+}
+.form-login .block-input .effect-focus {
+  border: 0;
+  padding: 4px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+}
+.form-login .block-input .effect-focus ~ label {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 15px;
+  color: #fff;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+}
+.form-login .block-input .effect-focus ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  transition: 0.4s;
+}
+.form-login .block-input .effect-focus:focus {
+  border-bottom: 2px solid #337ab7;
+}
+.form-login .block-input .effect-focus:focus ~ label {
+  top: 0;
+  font-size: 12px;
+  color: #fff;
+  transition: 0.3s;
+}
+.form-login .block-input .effect-focus:focus ~ .focus-border {
+  width: 100%;
+  transition: 0.4s;
+}
+.form-login .block-forget {
+  text-align: right;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.form-login .block-forget a {
+  color: #fff;
+}
+.form-login .block-forget a:hover {
+  text-decoration: none;
+}
+.form-login .block-btn .btn-block {
+  margin-top: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: #2196f3;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+
+/* Modal */
+.login .modal .modal-content {
+  border-radius: 0px;
+}
+.login .modal .modal-content .modal-header {
+  border-radius: 0px;
+  color: #707780;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  line-height: 24px;
+  border-bottom: 1px solid #e9ecf2;
+}
+.login .modal .modal-title {
+  color: #707780;
+  font-size: 16px;
+}
+.login .modal .modal-content .modal-header span {
+  font-size: 16px;
+}
+.login .modal .modal-content .modal-body {
+  color: #9398a0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.25px;
+  line-height: 24px;
+}
+.login .modal .note {
+  margin-top: 30px;
+  color: #707780;
+  color: #fb5d5d;
+}
+.login .modal .input-style {
+  border-radius: 0px;
+  font-weight: 300;
+  line-height: 40px;
+  color: #aaaaaa;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  outline: none;
+  height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+  margin: 0 0 15px 0;
+  padding: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+.login .modal .input-style:focus {
+  border-bottom: 1px solid #26a69a;
+  -webkit-box-shadow: 0 1px 0 0 #26a69a;
+  -moz-box-shadow: 0 1px 0 0 #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a;
+}
+.login .modal .btn-red {
+  margin-top: 0;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #fb5d5d;
+  border: 1px solid transparent;
+}
+.login .modal .btn-send {
+  margin-bottom: 0;
+  margin-left: 5px;
+  margin-top: 0;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #2196f3;
+  border: 1px solid transparent;
+}

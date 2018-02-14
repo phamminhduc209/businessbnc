@@ -32,4 +32,22 @@
 	  top: 7px;
 	  right: 10px;
 	}
+	.hidedesktop {
+	  display: none;
+	}
+	#main {
+		padding-top: 60px;
+	}
+	.block-page-about,
+	.block-page-news,
+	.block-page-download,
+	.block-page-contact {
+	  padding: 15px 0;
+	}
+	footer {
+		text-align: left;
+	}
+	footer .nav-link-footer li {
+		float: left;
+	}
 }

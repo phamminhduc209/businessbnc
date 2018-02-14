@@ -52,7 +52,11 @@
   /*
    * 3. Sticky Menu
   */
-  $('.block-header-fixed').sticky({ topSpacing: 0 });
+  $('.block-header-fixed').sticky({
+    topSpacing: 0,
+    responsiveWidth: true,
+    wrapperClassName: 'hidedesktop',
+  });
 
   /*
    * 7. Main Menu
