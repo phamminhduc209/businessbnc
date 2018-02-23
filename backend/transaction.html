@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Transaction</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.7 -->
+        <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="plugins/Ionicons/css/ionicons.min.css">
+        <!-- Select2 -->
+        <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+        <!-- Morris chart -->
+        <link rel="stylesheet" href="plugins/morris.js/morris.css">
+        <!-- Date Picker -->
+        <link rel="stylesheet" href="plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+        <!-- Daterange picker -->
+        <link rel="stylesheet" href="plugins/bootstrap-daterangepicker/daterangepicker.css">
+        <!-- Bootstrap wysihtml5 - text editor -->
+        <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+        <link rel="stylesheet" href="plugins/animate/animate.css">
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="dist/css/style.css">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="dist/css/responsive.css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!-- Google Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    </head>
+
+    <body class="hold-transition skin-red-light sidebar-mini">
+        <div class="wrapper">
+            <header class="main-header block-main-header">
+                <a href="#" class="logo">
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    <span class="logo-mini"><img src="dist/img/logo-secure-2017-10-22.png"></span>
+                    <!-- logo for regular state and mobile devices -->
+                    <span class="logo-lg"><img src="dist/img/logo-secure-2017-10-22.png"></span>
+                </a><!-- ./logo -->
+                <nav class="navbar navbar-static-top">
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav navbar-right m-n nav-user navleader" style="float:right;margin-right:0px;">
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src='dist/img/avatar.png' height='100px' class='user-image'>
+                                <span class="">ĐẶNG NGỌC DUYỆN (LIENKIMBNC)</span>
+                                </a>
+                                <ul class="dropdown-menu animated fadeInRight">
+                                    <li>
+                                        <a href="change-info.html" class="infoAcount2">Personal information</a>
+                                    </li>
+                                    <li>
+                                        <a href="change-info.html#ChangePassword" class="infoAcount3">Change Password</a>
+                                    </li>
+                                    <li>
+                                        <a href="change-info.html#ChangePasswordtransaction" class="infoAcount4">Change transaction password</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#" onclick="logout()">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <style>
+                            .navbar-nav>.user-menu .user-image{width: 45px;height: 45px;margin-top: -12px;margin-right:5px;}
+                        </style>
+                    </div>
+                </nav><!-- /.navbar navbar-static-top -->
+            </header><!-- /.main-header -->
+            
+            <aside class="main-sidebar">
+                <section class="sidebar">
+                    <ul class="sidebar-menu block-menu" data-widget="tree">
+                        <li class="treeview active">
+                            <a href="#">
+                                <i class="fa fa-dashboard text-menu-cus"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-sitemap text-menu-cus"></i>
+                                <span>Member</span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-exchange text-menu-cus"></i>
+                                <span>Transaction</span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-user text-menu-cus"></i>
+                                <span>Change info</span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-money text-menu-cus"></i>
+                                <span>Deposit</span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-history text-menu-cus"></i>
+                                <span>Transaction history</span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-external-link-square text-menu-cus"></i>
+                                <span>Upgrade package</span>
+                            </a>
+                        </li>
+                        <li class="treeview treeview_new treeview_new_top">
+                            <a class="center-text-cus ">
+                                <span>JUNIOR MANAGER</span>
+                            </a>
+                        </li>
+                        <li class="treeview treeview_new">
+                            <a class="center-text-cus ">
+                                <span>MANAGER</span>
+                            </a>
+                        </li>
+                        <li class="treeview treeview_new">
+                            <a class="center-text-cus ">
+                                <span>DIRECTOR</span>
+                            </a>
+                        </li>
+                        <li class="treeview treeview_new">
+                            <a class="center-text-cus ">
+                                <span>MANAGING DIRECTOR</span>
+                            </a>
+                        </li>
+                        <li class="treeview treeview_new">
+                            <a class="center-text-cus ">
+                                <span>SHAREHOLDER</span>
+                            </a>
+                        </li>
+                        <li class="treeview treeview_new">
+                            <a class="center-text-cus ">
+                                <span>MANAGEMENT COUNCIL</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section><!-- /.sidebar -->
+            </aside><!-- /.main-sidebar -->
+
+            <div class="content-wrapper">
+                <section class="content">
+                    <div class="account_right" id="account_right">
+                        <ul class="nav nav-tabs ui-sortable-handle">
+                            <li><a href="#CashAccount" data-toggle="tab"> <i class="fa fa-user"></i> CASH</a></li>
+                            <li><a href="#BecAccount" data-toggle="tab"><i class="fa fa-key "></i> BNC</a></li>
+                            <li><a href="#LnnAccount" data-toggle="tab"><i class="fa fa-lock "></i> Daily profits</a></li>
+                            <li class="active"><a href="#TradeAccount" data-toggle="tab"><i class="fa fa-lock "></i> Transaction money</a></li>
+                        </ul>
+                        <div class="tab-content no-padding">
+                            <div class="tab-pane" id="CashAccount">
+                                <div class="box box-primary form-horizontal">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="no-border clearfix">
+                                                <div class="box-header bg-gray-light">
+                                                    <h3 class="box-title bold">Cash Account</h3>
+                                                </div>
+                                                <div class="box-footer no-padding">
+                                                    <ul class="nav nav-pills nav-stacked">
+                                                        <li>
+                                                            <a href="#"><i class="fa fa-circle-o text-red"></i>Cash is in the wallet
+                                                            <b class="pull-right text-red">$498</b></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="fa fa-circle-o text-red"></i>The total amount charged <span class="pull-right text-green">$0</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div><!-- /box-footer -->
+                                                <form action="takeMoney">
+                                                    <h3 class="text-center">Submit a withdrawal request</h3>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 control-label text-light-blue">Transaction amount</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control col-full" name="cash_trade" placeholder="Transaction amount" type="text" required="">
+                                                        </div>
+                                                    </div><!-- /.form-group -->
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 control-label text-light-blue">Transaction password</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control col-full" name="tran_password" placeholder="Transaction password" type="password" required="">
+                                                        </div>
+                                                    </div><!-- /.form-group -->
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 control-label text-light-blue"></label>
+                                                        <div class="col-sm-8">
+                                                            <button class="btn btn-success" type="submit"><i class="fa fa-shopping-cart"></i> Send require</button>
+                                                        </div>
+                                                    </div><!-- /.form-group -->
+                                                </form><!-- /form -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.box -->
+                                <h3><b>History of withdrawals</b></h3>
+                                <h3 class="text-white">No data</h3>
+                            </div><!-- /#CashAccount -->
+                            <div class="box box-default tab-pane" id="BecAccount">
+                                <div class="price-bg">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="callout callout-warning">
+                                                <h5 class="no-margin">
+                                                    <span class="badge bg-primary">
+                                                        <i class="fa fa-info"></i>
+                                                    </span>
+                                                    BNC rates will be updated <b class="text-red">daily!</b>
+                                                </h5>
+                                            </div><!-- /.callout -->
+                                            <form action="tradeCash" class="form-horizontal">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label text-light-blue">Cash is in the wallet</label>
+                                                    <div class="col-sm-8">$498</div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label text-light-blue">BNC is in the wallet</label>
+                                                    <div class="col-sm-8">
+                                                        24.6305 BNC
+                                                    </div>
+                                                </div>
+                                                <div class="box no-border">
+                                                    <table class="table table-condensed">
+                                                        <tr>
+                                                            <th colspan="2" class="text-center">
+                                                                <span class="bold text-danger">Type</span>
+                                                            </th>
+                                                            <th>Price Sell/Buy BNC</th>
+                                                            <th>
+                                                                <i class="fa fa-long-arrow-up text-danger"></i>
+                                                                Highest price
+                                                            </th>
+                                                            <th>
+                                                                <i class="fa fa-long-arrow-down text-success"></i>
+                                                                Lowest price
+                                                            </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="30px">
+                                                                <input type="radio" name="type_trade" value="banBNC">
+                                                            </td>
+                                                            <td>Buy</td>
+                                                            <td>4.62267</td>
+                                                            <td>
+                                                                4.62267<input type="hidden" name="BNCtocash" value="4.62267">
+                                                            </td>
+                                                            <td>
+                                                                0.0434801
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="30px">
+                                                                <input type="radio" name="type_trade" value="muaBNC" checked="">
+                                                            </td>
+                                                            <td>Sell</td>
+                                                            <td>5.1363</td>
+                                                            <td>
+                                                                5.1363
+                                                                <input type="hidden" name="cashtoBNC" value="5.1363">
+                                                            </td>
+                                                            <td>0.0500021</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label text-light-blue">Transaction amount</label>
+                                                    <div class="col-sm-8">
+                                                        <input class="form-control col-full" name="cash_trade" placeholder="Transaction amount" type="text" required="" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label text-light-blue">Transaction password</label>
+                                                    <div class="col-sm-8">
+                                                        <input class="form-control col-full" name="tran_password" placeholder="Transaction password" type="password" required="">
+                                                        <div id="result"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label text-light-blue"></label>
+                                                    <div class="col-sm-8">
+                                                        <button class="btn btn-success" type="submit"><i class="fa fa-shopping-cart"></i> Send requirey</button>
+                                                    </div>
+                                                </div>
+                                            </form><!-- /.form-horizontal -->
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="chart" id="revenue-chart" style="position: relative; height: 400px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                                <svg height="400" version="1.1" width="505" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px;">
+                                                    <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc>
+                                                    <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                                                    <text x="25" y="364" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#151718" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: &quot;Open Sans&quot;;" font-size="10px" font-family="Open Sans" font-weight="normal">
+                                                        <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan>
+                                                    </text>
+                                                    <path fill="none" stroke="#151718" d="M37.5,364H480" stroke-width="0.4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                                                    <text x="25" y="279.25" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#151718" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: &quot;Open Sans&quot;;" font-size="10px" font-family="Open Sans" font-weight="normal">
+                                                        <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0.1</tspan>
+                                                    </text>
+                                                    <path fill="none" stroke="#151718" d="M37.5,279.25H480" stroke-width="0.4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                                                    <text x="25" y="194.5" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#151718" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: &quot;Open Sans&quot;;" font-size="10px" font-family="Open Sans" font-weight="normal">
+                                                        <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0.2</tspan>
+                                                    </text>
+                                                    <path fill="none" stroke="#151718" d="M37.5,194.5H480" stroke-width="0.4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                                                    <text x="25" y="109.75" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#151718" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: &quot;Open Sans&quot;;" font-size="10px" font-family="Open Sans" font-weight="normal">
+                                                        <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0.3</tspan>
+                                                    </text>
+                                                    <path fill="none" stroke="#151718" d="M37.5,109.75H480" stroke-width="0.4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                                                    <text x="25" y="25" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#151718" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: &quot;Open Sans&quot;;" font-size="10px" font-family="Open Sans" font-weight="normal">
+                                                        <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0.4</tspan>
+                                                    </text>
+                                                    <path fill="none" stroke="#151718" d="M37.5,25H480" stroke-width="0.4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                                                    <text x="452.66409266409266" y="376.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#151718" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: &quot;Open Sans&quot;;" font-size="10px" font-family="Open Sans" font-weight="normal" transform="matrix(1,0,0,1,0,5.5)">
+                                                        <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2017-08</tspan>
+                                                    </text>
+                                                    <text x="348.44594594594594" y="376.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#151718" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: &quot;Open Sans&quot;;" font-size="10px" font-family="Open Sans" font-weight="normal" transform="matrix(1,0,0,1,0,5.5)">
+                                                        <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2017-06</tspan>
+                                                    </text>
+                                                    <text x="244.2277992277992" y="376.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#151718" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: &quot;Open Sans&quot;;" font-size="10px" font-family="Open Sans" font-weight="normal" transform="matrix(1,0,0,1,0,5.5)">
+                                                        <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2017-04</tspan>
+                                                    </text>
+                                                    <text x="143.4266409266409" y="376.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#151718" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: &quot;Open Sans&quot;;" font-size="10px" font-family="Open Sans" font-weight="normal" transform="matrix(1,0,0,1,0,5.5)">
+                                                        <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2017-02</tspan>
+                                                    </text>
+                                                    <text x="37.5" y="376.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#151718" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 10px; line-height: normal; font-family: &quot;Open Sans&quot;;" font-size="10px" font-family="Open Sans" font-weight="normal" transform="matrix(1,0,0,1,0,5.5)">
+                                                        <tspan dy="3.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2016-12</tspan>
+                                                    </text>
+                                                    <path fill="none" stroke="#2196f3" d="M37.5,355.525C39.63561776061776,354.465625,43.90685328185328,352.61171875,46.04247104247104,351.2875C49.032335907335906,349.43359375,55.01206563706564,345.4609375,58.0019305019305,342.8125C60.991795366795365,340.1640625,66.97152509652508,332.21875,69.96138996138995,330.1C72.95125482625483,327.98125000000005,78.93098455598455,326.6040625,81.92084942084942,325.8625C84.91071428571428,325.1209375,90.89044401544402,324.69718750000004,93.88030888030887,324.1675C96.87017374517374,323.6378125,102.84990347490347,322.6282904411765,105.83976833976834,321.625C117.37210424710425,317.7551654411765,140.43677606177607,309.5783928571429,151.96911196911196,304.675C155.3861003861004,303.22214285714284,162.2200772200772,298.7425,165.63706563706563,296.2C170.76254826254825,292.38624999999996,181.01351351351352,282.5953947368421,186.13899613899613,279.25C189.128861003861,277.2985197368421,195.10859073359072,276.0506875,198.0984555984556,275.0125C199.37982625482624,274.5675625,201.94256756756755,273.555859375,203.2239382239382,273.3175C205.35955598455598,272.920234375,209.63079150579148,273.2351041666667,211.76640926640925,272.47C217.31901544401543,270.4807291666667,228.4242277992278,264.5379296875,233.97683397683397,262.3C235.25820463320463,261.7835546875,237.82094594594594,262.24703124999996,239.1023166023166,261.4525C239.52944015444015,261.18765625,240.38368725868725,258.274375,240.8108108108108,258.0625C243.37355212355212,256.79125,248.49903474903473,256.21340909090907,251.06177606177604,255.51999999999998C253.1973938223938,254.94215909090906,257.4686293436293,258.57705357142856,259.60424710424707,252.9775C260.4584942084942,250.73767857142855,262.1669884169884,227.3984090909091,263.0212355212355,224.1625C266.86534749034746,209.60090909090908,274.55357142857144,188.65225,278.3976833976834,181.7875C280.9604247104247,177.211,286.08590733590734,178.3975,288.64864864864865,178.3975C291.21138996138995,178.3975,296.3368725868726,187.5989285714286,298.8996138996139,181.7875C299.3267374517374,180.8189285714286,300.18098455598454,152.2733125,300.60810810810807,151.2775C304.45222007722003,142.31518749999998,312.140444015444,143.73475,315.984555984556,141.95499999999998C318.5472972972973,140.7685,323.6727799227799,140.84265625,326.2355212355212,139.4125C327.08976833976834,138.93578125,328.7982625482625,135.25975,329.65250965250965,134.3275C330.9338803088803,132.929125,333.4966216216216,130.46078124999997,334.77799227799227,130.08999999999997C338.62210424710423,128.97765624999997,346.31032818532816,128.9908984375,350.1544401544401,128.39499999999998C353.14430501930497,127.93152343749998,359.12403474903476,126.47046874999995,362.1138996138996,125.85249999999996C364.2495173745174,125.41109374999996,368.5207528957529,124.62833333333336,370.65637065637065,124.15750000000003C372.36486486486484,123.78083333333338,375.7818532818533,122.78031250000004,377.49034749034746,122.46250000000003C379.19884169884165,122.14468750000003,382.61583011583014,121.84613636363638,384.3243243243243,121.61500000000001C387.31418918918916,121.21051136363637,393.2939189189189,120.36493750000001,396.28378378378375,119.92000000000002C397.5651544401544,119.72931250000002,400.1278957528957,119.39031250000002,401.40926640926637,119.07250000000002C402.690637065637,118.75468750000002,405.2533783783784,117.88600000000004,406.53474903474904,117.37750000000003C407.38899613899616,117.03850000000003,409.0974903474903,116.10625,409.9517374517374,115.6825C410.80598455598454,115.25874999999999,412.5144787644787,114.12875000000001,413.36872586872585,113.98750000000001C416.35859073359075,113.49312500000002,422.33832046332043,113.45781250000002,425.3281853281853,113.14000000000001C428.31805019305017,112.82218750000001,434.2977799227799,112.50437500000002,437.28764478764475,111.44500000000002C437.28764478764475,111.44500000000002,437.28764478764475,108.9025,437.28764478764475,108.9025C441.1317567567567,107.84312499999999,448.8199806949807,107.68421874999999,452.66409266409266,107.20749999999998C453.9454633204633,107.04859374999998,456.5082046332046,106.49620535714287,457.7895752895753,106.36000000000001C462.48793436293437,105.86058035714288,471.8846525096525,105.3821153846154,476.58301158301157,104.66500000000002C477.4372586872587,104.5346153846154,479.1457528957529,103.39375000000003,480,102.97000000000003" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                                                    <path fill="none" stroke="#ff5722" d="M37.5,357.22C39.63561776061776,356.16062500000004,43.90685328185328,354.30671875,46.04247104247104,352.9825C49.032335907335906,351.12859375,55.01206563706564,347.1559375,58.0019305019305,344.5075C60.991795366795365,341.8590625,66.97152509652508,333.91375,69.96138996138995,331.795C72.95125482625483,329.67625000000004,78.93098455598455,328.2990625,81.92084942084942,327.5575C84.91071428571428,326.8159375,90.89044401544402,326.39218750000003,93.88030888030887,325.8625C96.87017374517374,325.3328125,102.84990347490347,324.3232904411765,105.83976833976834,323.32C117.37210424710425,319.45016544117647,140.43677606177607,311.2733928571429,151.96911196911196,306.37C155.3861003861004,304.91714285714284,162.2200772200772,300.4375,165.63706563706563,297.895C170.76254826254825,294.08124999999995,181.01351351351352,284.2903947368421,186.13899613899613,280.945C189.128861003861,278.9935197368421,195.10859073359072,277.7456875,198.0984555984556,276.7075C199.37982625482624,276.2625625,201.94256756756755,275.17140624999996,203.2239382239382,275.0125C205.35955598455598,274.74765625,209.63079150579148,275.1890625,211.76640926640925,275.0125C217.31901544401543,274.5534375,228.4242277992278,273.15859375,233.97683397683397,272.47C235.25820463320463,272.31109375000005,237.82094594594594,272.258125,239.1023166023166,271.6225C239.52944015444015,271.410625,240.38368725868725,269.26160714285714,240.8108108108108,269.08C243.37355212355212,267.99035714285714,248.49903474903473,267.2309090909091,251.06177606177604,266.5375C253.1973938223938,265.9596590909091,257.4686293436293,269.1405357142857,259.60424710424707,263.995C260.4584942084942,261.9367857142857,262.1669884169884,240.68875000000003,263.0212355212355,237.72250000000003C266.86534749034746,224.37437500000001,274.55357142857144,205.09375,278.3976833976834,198.73749999999998C280.9604247104247,194.5,286.08590733590734,195.3475,288.64864864864865,195.3475C291.21138996138995,195.3475,296.3368725868726,202.73285714285714,298.8996138996139,198.73749999999998C299.3267374517374,198.07160714285712,300.18098455598454,177.48643749999997,300.60810810810807,176.7025C304.45222007722003,169.64706249999998,312.140444015444,168.9055,315.984555984556,167.38C318.5472972972973,166.363,323.6727799227799,167.64484375,326.2355212355212,166.5325C327.08976833976834,166.16171875,328.7982625482625,162.21025000000003,329.65250965250965,161.44750000000002C330.9338803088803,160.30337500000002,333.4966216216216,159.27578125,334.77799227799227,158.905C338.62210424710423,157.79265625,346.31032818532816,156.3492578125,350.1544401544401,155.51500000000001C353.14430501930497,154.8661328125,359.12403474903476,153.59046874999999,362.1138996138996,152.9725C364.2495173745174,152.53109375,368.5207528957529,151.630625,370.65637065637065,151.2775C372.36486486486484,150.995,375.7818532818533,150.641875,377.49034749034746,150.43C379.19884169884165,150.21812500000001,382.61583011583014,149.81363636363636,384.3243243243243,149.5825C387.31418918918916,149.17801136363636,393.2939189189189,148.3324375,396.28378378378375,147.8875C397.5651544401544,147.6968125,400.1278957528957,147.25187499999998,401.40926640926637,147.04C402.690637065637,146.828125,405.2533783783784,146.573875,406.53474903474904,146.1925C407.38899613899616,145.93825,409.0974903474903,144.92125000000001,409.9517374517374,144.4975C410.80598455598454,144.07375,412.5144787644787,142.94375,413.36872586872585,142.80249999999998C416.35859073359075,142.308125,422.33832046332043,142.16687499999998,425.3281853281853,141.95499999999998C428.31805019305017,141.743125,434.2977799227799,141.743125,437.28764478764475,141.1075C437.28764478764475,141.1075,437.28764478764475,139.4125,437.28764478764475,139.4125C441.1317567567567,138.35312499999998,448.8199806949807,137.50562499999998,452.66409266409266,136.86999999999998C453.9454633204633,136.65812499999998,456.5082046332046,136.15870535714285,457.7895752895753,136.02249999999998C462.48793436293437,135.52308035714285,471.8846525096525,135.04461538461535,476.58301158301157,134.3275C477.4372586872587,134.19711538461536,479.1457528957529,133.05624999999998,480,132.6325" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                                                    <circle cx="37.5" cy="355.525" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="46.04247104247104" cy="351.2875" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="58.0019305019305" cy="342.8125" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="69.96138996138995" cy="330.1" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="81.92084942084942" cy="325.8625" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="93.88030888030887" cy="324.1675" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="105.83976833976834" cy="321.625" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="151.96911196911196" cy="304.675" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="165.63706563706563" cy="296.2" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="186.13899613899613" cy="279.25" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="198.0984555984556" cy="275.0125" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="203.2239382239382" cy="273.3175" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="211.76640926640925" cy="272.47" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="233.97683397683397" cy="262.3" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="239.1023166023166" cy="261.4525" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="240.8108108108108" cy="258.0625" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="251.06177606177604" cy="255.51999999999998" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="259.60424710424707" cy="252.9775" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="263.0212355212355" cy="224.1625" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="278.3976833976834" cy="181.7875" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="288.64864864864865" cy="178.3975" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="298.8996138996139" cy="181.7875" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="300.60810810810807" cy="151.2775" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="315.984555984556" cy="141.95499999999998" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="326.2355212355212" cy="139.4125" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="329.65250965250965" cy="134.3275" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="334.77799227799227" cy="130.08999999999997" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="350.1544401544401" cy="128.39499999999998" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="362.1138996138996" cy="125.85249999999996" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="370.65637065637065" cy="124.15750000000003" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="377.49034749034746" cy="122.46250000000003" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="384.3243243243243" cy="121.61500000000001" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="396.28378378378375" cy="119.92000000000002" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="401.40926640926637" cy="119.07250000000002" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="406.53474903474904" cy="117.37750000000003" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="409.9517374517374" cy="115.6825" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="413.36872586872585" cy="113.98750000000001" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="425.3281853281853" cy="113.14000000000001" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="437.28764478764475" cy="111.44500000000002" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="437.28764478764475" cy="108.9025" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="452.66409266409266" cy="107.20749999999998" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="457.7895752895753" cy="106.36000000000001" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="476.58301158301157" cy="104.66500000000002" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="480" cy="102.97000000000003" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="480" cy="102.97000000000003" r="4" fill="#2196f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="37.5" cy="357.22" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="46.04247104247104" cy="352.9825" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="58.0019305019305" cy="344.5075" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="69.96138996138995" cy="331.795" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="81.92084942084942" cy="327.5575" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="93.88030888030887" cy="325.8625" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="105.83976833976834" cy="323.32" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="151.96911196911196" cy="306.37" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="165.63706563706563" cy="297.895" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="186.13899613899613" cy="280.945" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="198.0984555984556" cy="276.7075" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="203.2239382239382" cy="275.0125" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="211.76640926640925" cy="275.0125" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="233.97683397683397" cy="272.47" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="239.1023166023166" cy="271.6225" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="240.8108108108108" cy="269.08" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="251.06177606177604" cy="266.5375" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="259.60424710424707" cy="263.995" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="263.0212355212355" cy="237.72250000000003" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="278.3976833976834" cy="198.73749999999998" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="288.64864864864865" cy="195.3475" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="298.8996138996139" cy="198.73749999999998" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="300.60810810810807" cy="176.7025" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="315.984555984556" cy="167.38" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="326.2355212355212" cy="166.5325" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="329.65250965250965" cy="161.44750000000002" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="334.77799227799227" cy="158.905" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="350.1544401544401" cy="155.51500000000001" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="362.1138996138996" cy="152.9725" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="370.65637065637065" cy="151.2775" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="377.49034749034746" cy="150.43" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="384.3243243243243" cy="149.5825" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="396.28378378378375" cy="147.8875" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="401.40926640926637" cy="147.04" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="406.53474903474904" cy="146.1925" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="409.9517374517374" cy="144.4975" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="413.36872586872585" cy="142.80249999999998" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="425.3281853281853" cy="141.95499999999998" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="437.28764478764475" cy="141.1075" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="437.28764478764475" cy="139.4125" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="452.66409266409266" cy="136.86999999999998" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="457.7895752895753" cy="136.02249999999998" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="476.58301158301157" cy="134.3275" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="480" cy="132.6325" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                    <circle cx="480" cy="132.6325" r="4" fill="#ff5722" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                                                </svg>
+                                                <div class="morris-hover morris-default-style" style="left: 63.8398px; top: 225px; display: none;">
+                                                    <div class="morris-hover-row-label">2017-01-10</div>
+                                                    <div class="morris-hover-point" style="color: #ff5722">
+                                                        Sell: :
+                                                        0.048
+                                                    </div>
+                                                    <div class="morris-hover-point" style="color: #2196f3">
+                                                        Buy: :
+                                                        0.05
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.chart -->
+                                            <div class="">
+                                                <span style="width:50px;border:2px solid #2196f3;display:inline-block;vertical-align:middle;"></span> Buy
+                                            </div>
+                                            <div class="">
+                                                <span style="width:50px;border:2px solid #ff5722;display:inline-block;vertical-align:middle;"></span> Sell
+                                            </div>
+                                        </div>
+                                    </div><!-- /.row -->
+                                    <div class="box-body">
+                                        <h3><b>Lịch sử giao dịch</b></h3>
+                                        <div id="trade_cash_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                            <div class="row">
+                                                <div class="col-sm-6"></div>
+                                                <div class="col-sm-6"></div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="table-repsonsive">
+                                                    <table class="table table-hover table-striped dataTable no-footer" id="trade_cash" role="grid" aria-describedby="lstdt_info">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>No</th>
+                                                                <th>Transaction amount</th>
+                                                                <th>Message</th>
+                                                                <th>Date created</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td> <b>$50</b></td>
+                                                                <td>You have traded 50 CASH to 24.630541871921 BNC</td>
+                                                                <td>2017-12-26</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-5">
+                                                    <div id="trade_cash_info" role="status" aria-live="polite">
+                                                        Showing 1 to 1 of 1 entries
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-7">
+                                                    <div class="block-pagination text-right" id="trade_cash_paginate">
+                                                        <ul class="pagination">
+                                                            <li class="paginate_button previous disabled" id="trade_cash_previous">
+                                                                <a href="#" aria-controls="trade_cash" data-dt-idx="0" tabindex="0">Previous</a>
+                                                            </li>
+                                                            <li class="active">
+                                                                <a href="#" aria-controls="trade_cash" data-dt-idx="1" tabindex="0">1</a>
+                                                            </li>
+                                                            <li class="paginate_button next disabled" id="trade_cash_next">
+                                                                <a href="#" aria-controls="trade_cash" data-dt-idx="2" tabindex="0">Next</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.box-body -->
+                                </div>
+                            </div><!-- /#BecAccount -->
+                            <div class="box-default tab-pane" id="LnnAccount">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-striped dataTable no-footer">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Username</th>
+                                                <th>Amount received / day</th>
+                                                <th>Content</th>
+                                                <th>Date created</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>LIENKIMBNC</td>
+                                                <td>$10</td>
+                                                <td>You have been added $10 Money Profits Day</td>
+                                                <td>2018-02-23</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>LIENKIMBNC</td>
+                                                <td>$10</td>
+                                                <td>You have been added $10 Money Profits Day</td>
+                                                <td>2018-02-22</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>LIENKIMBNC</td>
+                                                <td>$10</td>
+                                                <td>You have been added $10 Money Profits Day</td>
+                                                <td>2018-02-21</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>LIENKIMBNC</td>
+                                                <td>$10</td>
+                                                <td>You have been added $10 Money Profits Day</td>
+                                                <td>2018-02-20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>LIENKIMBNC</td>
+                                                <td>$10</td>
+                                                <td>You have been added $10 Money Profits Day</td>
+                                                <td>2018-02-19</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>LIENKIMBNC</td>
+                                                <td>$10</td>
+                                                <td>You have been added $10 Money Profits Day</td>
+                                                <td>2018-02-18</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>LIENKIMBNC</td>
+                                                <td>$10</td>
+                                                <td>You have been added $10 Money Profits Day</td>
+                                                <td>2018-02-17</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>LIENKIMBNC</td>
+                                                <td>$10</td>
+                                                <td>You have been added $10 Money Profits Day</td>
+                                                <td>2018-02-16</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>LIENKIMBNC</td>
+                                                <td>$10</td>
+                                                <td>You have been added $10 Money Profits Day</td>
+                                                <td>2018-02-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>LIENKIMBNC</td>
+                                                <td>$10</td>
+                                                <td>You have been added $10 Money Profits Day</td>
+                                                <td>2018-02-14</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-5">
+                                        <div id="trade_cash_info" role="status" aria-live="polite">
+                                            Showing 1 to 1 of 1 entries
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7">
+                                        <div class="block-pagination text-right" id="trade_cash_paginate">
+                                            <ul class="pagination">
+                                                <li class="paginate_button previous disabled" id="trade_cash_previous">
+                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="0" tabindex="0">Previous</a>
+                                                </li>
+                                                <li class="active">
+                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="1" tabindex="0">1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="2" tabindex="0">2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="3" tabindex="0">3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="4" tabindex="0">4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="5" tabindex="0">5</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="6" tabindex="0">6</a>
+                                                </li>
+                                                <li class="next disabled" id="trade_cash_next">
+                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="7" tabindex="0">Next</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /#LnnAccount -->
+                            <div class="box-default tab-pane active" id="TradeAccount">
+                                <div class="box form-horizontal">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="no-border clearfix">
+                                                <div class="box-header bg-gray-light">
+                                                    <h3 class="box-title bold">Conduct transaction</h3>
+                                                </div>
+                                                <div class="box-footer no-padding">
+                                                    <ul class="nav nav-pills nav-stacked">
+                                                        <li>
+                                                            <a href="#"><i class="fa fa-circle-o text-red"></i>Cash is in the wallet
+                                                            <b class="pull-right text-red">$498</b></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <form action="takeMoney">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 control-label text-light-blue">Username of recipient</label>
+                                                        <div class="col-sm-8">
+                                                            <select name="user" class="form-control select2 list-user col-full" required="">
+                                                                <option value="">Select recipients</option>
+                                                                <option value="1">root</option>
+                                                                <option value="2">test50</option>
+                                                                <option value="3">pack50</option>
+                                                                <option value="4">company</option>
+                                                                <option value="5">bnc001</option>
+                                                                <option value="6">bnc002</option>
+                                                                <option value="7">bnc003</option>
+                                                                <option value="8">bnc004</option>
+                                                                <option value="9">bnc005</option>
+                                                                <option value="10">bnc006</option>
+                                                                <option value="11">bnc007</option>
+                                                                <option value="12">bnc008</option>
+                                                                <option value="13">bnc009</option>
+                                                                <option value="14">bnc010</option>
+                                                                <option value="15">bnc011</option>
+                                                                <option value="16">bnc012</option>
+                                                                <option value="17">bnc013</option>
+                                                                <option value="18">bnc014</option>
+                                                                <option value="19">bnc015</option>
+                                                                <option value="20">bnc016</option>
+                                                                <option value="21">bnc017</option>
+                                                                <option value="22">bnc018</option>
+                                                                <option value="23">bnc019</option>
+                                                                <option value="24">bnc020</option>
+                                                                <option value="25">bnc021</option>
+                                                                <option value="26">bnc022</option>
+                                                                <option value="27">bnc023</option>
+                                                                <option value="28">bnc024</option>
+                                                                <option value="29">bnc025</option>
+                                                                <option value="30">bnc026</option>
+                                                                <option value="31">bnc027</option>
+                                                                <option value="32">bnc028</option>
+                                                                <option value="33">bnc029</option>
+                                                                <option value="34">bnc030</option>
+                                                                <option value="35">bnc031</option>
+                                                                <option value="36">bnc032</option>
+                                                                <option value="37">bnc033</option>
+                                                                <option value="38">bnc034</option>
+                                                                <option value="39">bnc035</option>
+                                                                <option value="40">bnc036</option>
+                                                                <option value="41">bnc037</option>
+                                                                <option value="42">bnc038</option>
+                                                                <option value="43">bnc039</option>
+                                                                <option value="44">bnc040</option>
+                                                                <option value="45">bnc041</option>
+                                                                <option value="46">bnc042</option>
+                                                                <option value="47">bnc043</option>
+                                                                <option value="48">bnc044</option>
+                                                                <option value="49">bnc045</option>
+                                                                <option value="50">bnc046</option>
+                                                                <option value="51">bnc047</option>
+                                                                <option value="52">bnc048</option>
+                                                                <option value="53">bnc049</option>
+                                                                <option value="54">bnc050</option>
+                                                                <option value="55">bnc051</option>
+                                                                <option value="56">bnc052</option>
+                                                                <option value="57">bnc053</option>
+                                                                <option value="58">bnc054</option>
+                                                                <option value="59">bnc055</option>
+                                                                <option value="60">BNC056</option>
+                                                                <option value="61">bnc057</option>
+                                                                <option value="62">bnc058</option>
+                                                                <option value="63">bnc059</option>
+                                                                <option value="64">bnc060</option>
+                                                                <option value="65">bnc061</option>
+                                                                <option value="66">bnc062</option>
+                                                                <option value="67">bnc063</option>
+                                                                <option value="68">bnc064</option>
+                                                                <option value="69">bnc065</option>
+                                                                <option value="70">bnc066</option>
+                                                                <option value="71">bnc067</option>
+                                                                <option value="72">bnc068</option>
+                                                                <option value="73">bnc069</option>
+                                                                <option value="74">bnc070</option>
+                                                                <option value="75">bnc071</option>
+                                                                <option value="76">bnc072</option>
+                                                                <option value="77">bnc073</option>
+                                                                <option value="78">bnc074</option>
+                                                                <option value="79">bnc075</option>
+                                                                <option value="80">bnc076</option>
+                                                                <option value="81">bnc077</option>
+                                                                <option value="82">bnc078</option>
+                                                                <option value="83">bnc079</option>
+                                                                <option value="84">bnc080</option>
+                                                                <option value="85">bnc081</option>
+                                                                <option value="86">bnc082</option>
+                                                                <option value="87">bnc083</option>
+                                                                <option value="88">bnc084</option>
+                                                                <option value="89">bnc085</option>
+                                                                <option value="90">bnc086</option>
+                                                                <option value="91">bnc087</option>
+                                                                <option value="92">bnc088</option>
+                                                                <option value="93">bnc089</option>
+                                                                <option value="94">bnc090</option>
+                                                                <option value="95">bnc091</option>
+                                                                <option value="96">bnc092</option>
+                                                                <option value="97">bnc093</option>
+                                                                <option value="98">bnc094</option>
+                                                                <option value="99">bnc095</option>
+                                                                <option value="100">bnc096</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 control-label text-light-blue">Transaction amount</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control col-full" name="cash_trade" placeholder="Transaction amount" type="text" required="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 control-label text-light-blue">Transaction password</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control col-full" name="tran_password" placeholder="Transaction password" type="password" required="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 control-label text-light-blue"></label>
+                                                        <div class="col-sm-8">
+                                                            <button class="btn btn-success" type="submit"><i class="fa fa-shopping-cart"></i> Send require</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <h3><b>Transaction history</b></h3>
+                                        <div class="form-inline dt-bootstrap no-footer">
+                                            <div class="row">
+                                                <div class="col-sm-6"></div>
+                                                <div class="col-sm-6"></div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="table-repsonsive">
+                                                    <table class="table table-hover table-striped no-footer">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>No</th>
+                                                                <th>Transaction amount</th>
+                                                                <th>Partner</th>
+                                                                <th>Message</th>
+                                                                <th>Date created</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>
+                                                                    <b style="color: green">+ $900</b>                        
+                                                                </td>
+                                                                <td>bnc001</td>
+                                                                <td>You have been received $900 from members company01</td>
+                                                                <td>2018-01-13</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>
+                                                                    <b style="color: green">+ $300</b>
+                                                                </td>
+                                                                <td>tuancuongbnc</td>
+                                                                <td>You have been received $300 from members NGUYỄN TUẤN CƯỜNG</td>
+                                                                <td>2018-01-13</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td>
+                                                                    <b style="color: green">+ $250</b>
+                                                                </td>
+                                                                <td>bnc001</td>
+                                                                <td>You have been received $250 from members company01</td>
+                                                                <td>2017-12-26</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-5">
+                                                    <div id="trade_cash_info" role="status" aria-live="polite">
+                                                        Showing 1 to 1 of 1 entries
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-7">
+                                                    <div class="block-pagination text-right" id="trade_cash_paginate">
+                                                        <ul class="pagination">
+                                                            <li class="paginate_button previous disabled" id="trade_cash_previous">
+                                                                <a href="#" aria-controls="trade_cash" data-dt-idx="0" tabindex="0">Previous</a>
+                                                            </li>
+                                                            <li class="active">
+                                                                <a href="#" aria-controls="trade_cash" data-dt-idx="1" tabindex="0">1</a>
+                                                            </li>
+                                                            <li class="paginate_button next disabled" id="trade_cash_next">
+                                                                <a href="#" aria-controls="trade_cash" data-dt-idx="2" tabindex="0">Next</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /#TradeAccount -->
+                        </div>
+                    </div><!-- /.account_right #account_right -->
+                </section><!-- /.content -->
+            </div><!-- /.content-wrapper -->
+
+            <footer class="main-footer">
+                <strong>Copyright &copy; 2017 <a href="#">Business Coin</a>.</strong> All rights
+                reserved.
+            </footer><!-- /.main-footer -->
+
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 3 -->
+        <script src="plugins/jquery/dist/jquery.min.js"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Morris.js charts -->
+        <script src="plugins/raphael/raphael.min.js"></script>
+        <script src="plugins/morris.js/morris.min.js"></script>
+        <!-- Sparkline -->
+        <script src="plugins/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+        <!-- jvectormap -->
+        <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="plugins/jquery-knob/dist/jquery.knob.min.js"></script>
+        <!-- Daterangepicker -->
+        <script src="plugins/moment/min/moment.min.js"></script>
+        <script src="plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <!-- Datepicker -->
+        <script src="plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <!-- Bootstrap WYSIHTML5 -->
+        <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+        <!-- Slimscroll -->
+        <script src="plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="plugins/fastclick/lib/fastclick.js"></script>
+        <!-- Select2 -->
+        <script src="plugins/select2/js/select2.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="dist/js/adminlte.min.js"></script>
+        <!-- Loader -->
+        <script src="plugins/loader/loader.js"></script>
+        <script>
+            $(function () {
+                //Initialize Select2 Elements
+                $('.select2').select2()
+            })
+        </script>
+    </body>
+</html>
