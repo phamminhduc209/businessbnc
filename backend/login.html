@@ -10,12 +10,15 @@
         <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
         <!-- Ionicons -->
         <link rel="stylesheet" href="plugins/Ionicons/css/ionicons.min.css">
+        <link rel="stylesheet" href="plugins/material/material.css">
+        <!-- <link rel="stylesheet" href="plugins/material/signin.css"> -->
         <!-- Style CSS -->
-        <link rel="stylesheet" href="dist/css/style.css">
+        <link rel="stylesheet" href="dist/css/common.css">
+        <link rel="stylesheet" href="dist/css/login.css">
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="dist/css/responsive.css">
         <!-- Import Font Google -->
-        <link href="http://fonts.googleapis.com/css?family=Nunito:400,300" rel="stylesheet">
+        <!-- <link href="http://fonts.googleapis.com/css?family=Nunito:400,300" rel="stylesheet"> -->
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -32,26 +35,16 @@
 				<form action="" method="get">
 					<h2 class="signup-heading">Login</h2>
 				    <div class="clearfix">
-			    		<div class="block-input">
-			    			<div class="block-icon">
-			    				<i class="ion-coffee prefix"></i>
-			    			</div>
-			    			<div class="block-wrap-input">
-			    				<input class="effect-focus" type="text" placeholder="">
-					            <label>Username</label>
-					            <span class="focus-border"></span>
-			    			</div>
-			    		</div>
-			        	<div class="block-input">
-			    			<div class="block-icon">
-			    				<i class="ion-key prefix"></i>
-			    			</div>
-			    			<div class="block-wrap-input">
-			    				<input class="effect-focus" type=password" placeholder="">
-					            <label>Password</label>
-					            <span class="focus-border"></span>
-			    			</div>
-			    		</div>
+			    		<div class="input-field">
+                            <i class="ion-coffee prefix"></i>
+                            <input id="icon_prefix-2" name="user" type="text" class="validate input-style">
+                            <label for="icon_prefix-2">Username</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="ion-key prefix"></i>
+                            <input id="icon_prefix-3" type="password" class="validate input-style" name="password">
+                            <label for="icon_prefix-3">Password</label>
+                        </div>
 			        </div>
 				    <div class="block-forget">
 				    	<a href="#" data-toggle="modal" data-target="#forgot">Forget Password?</a>
@@ -89,5 +82,6 @@
         <script src="plugins/jquery/dist/jquery.min.js"></script>
         <!-- Bootstrap 3.3.7 -->
         <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="plugins/material/materialize.js"></script>
     </body>
 </html>
