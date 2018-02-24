@@ -1,0 +1,169 @@
+/*===== block title =====*/
+.block-title .title-sec {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #276271;
+  margin-bottom: 10px
+}
+
+/*===== Slide =====*/
+.block-slider {
+  position: relative;
+  overflow: hidden;
+  & .owl-carousel .owl-nav .owl-next,
+  & .owl-carousel .owl-nav .owl-prev {
+  	position: absolute;
+	  top: 50%;
+	  -webkit-transform: translate(0, -50%);
+	  -ms-transform: translate(0, -50%);
+	  transform: translate(0, -50%);
+	  width: 32px;
+	  height: 32px;
+	  text-align: center;
+	  background: #6C6A6A;
+	  border-radius: 100%;
+	  & i {
+	  	color: #fff;
+		  line-height: 30px;
+		  font-size: 20px;
+	  }
+  }
+  & .owl-carousel .owl-nav .owl-next {
+  	right: -40px;
+	  opacity: 0;
+	  visibility: hidden;
+	  -webkit-transition: 0.3s;
+	  -o-transition: 0.3s;
+	  transition: 0.3s;
+  }
+  & .owl-carousel .owl-nav .owl-prev {
+  	left: -40px;
+	  opacity: 0;
+	  visibility: hidden;
+	  -webkit-transition: 0.3s;
+	  -o-transition: 0.3s;
+	  transition: 0.3s;
+  }
+  &:hover .owl-carousel .owl-nav .owl-next {
+  	right: 10px;
+	  opacity: 1;
+	  visibility: visible;
+	  -webkit-transition: 0.3s;
+	  -o-transition: 0.3s;
+	  transition: 0.3s;
+  }
+  &:hover .owl-carousel .owl-nav .owl-prev {
+  	left: 10px;
+	  opacity: 1;
+	  visibility: visible;
+	  -webkit-transition: 0.3s;
+	  -o-transition: 0.3s;
+	  transition: 0.3s;
+  }
+  & .owl-dots {
+	  position: absolute;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  text-align: center;
+	  & .owl-dot {
+		  display: inline-block;
+		  background: #666;
+		  text-indent: -9999px; 
+		  width: 10px;
+		  height: 10px;
+		  margin: 0 5px;
+		  outline: 0;
+		  -moz-border-radius: 5px;
+		  -webkit-border-radius: 5px;
+		  border-radius: 5px;
+		}
+		&:hover,
+		&.active {
+			background: #fff;
+		}
+	}
+}
+/*===== Parallax =====*/
+.block-parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: table;
+  width: 100%;
+}
+/*===== Section About Us =====*/
+.block-aboutus {
+	& .block-parallax-img {
+	  background-image: url(../images/parallax/meta-trader-4-standard-1501992848-1508778680.jpg);
+	}
+	& .block-content {
+	  background: rgba(0,0,0,0.5);
+	  padding: 10px 0;
+	  & p {
+			margin-bottom: 10px;
+	  	color: #fff;
+		}
+		& ul {
+			margin-top: 0;
+		  margin-bottom: 10px;
+		  padding-left: 40px;
+		  & li {
+		  	list-style-type: disc;
+	  		color: #fff;
+		  }
+		}
+	}
+}
+
+/*===== Section Why Trade Us =====*/
+.block-whytrade {
+	& .block-content {
+	  padding: 30px 0;
+	}
+	& .block-parallax-img {
+	  background-image: url(../images/parallax/background-home-1508779221.jpg);
+	}
+	& img {
+	  width: 100%;
+	}
+}
+
+/*===== Section Why Trade Us =====*/
+.block-comment .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  margin-top: 10px;
+  & .owl-dot {
+	  display: inline-block;
+	  width: 15px;
+	  height: 5px;
+	  margin: 5px 7px;
+	  background: #D6D6D6;
+	  transition: opacity 200ms ease;
+	  border-radius: 5px;
+	  text-indent: 99999999px;
+	  &:hover,
+	  & .active {
+	  	background: #6BBD45;
+	  }
+	}
+}
+
+/*===== Section News Home =====*/
+.news-home {
+  margin-bottom: 20px;
+  &:nth-child(2n+1) {
+	  clear: both;
+	}
+	& h2 {
+	  font-size: 15px;
+	  margin: 5px 0px;
+	  font-weight: 600;
+	  color: #333;
+	}
+}

@@ -1,0 +1,13 @@
+@charset "utf-8";
+/*****BASE*****/
+@import "base/reset";
+@import "base/common";
+/*****LAYOUT*****/
+@import "layout/header";
+@import "layout/footer";
+/*****PAGE*****/
+
+@import "pages/home.scss";
+@import "pages/content.scss";
+@import "pages/news.scss";
+@import "pages/download.scss";

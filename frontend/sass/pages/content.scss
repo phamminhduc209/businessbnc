@@ -1,0 +1,9 @@
+/*===== Page About =====*/
+.block-page-about ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  & li {
+  	list-style-type: disc;
+  }
+}

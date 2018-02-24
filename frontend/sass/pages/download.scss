@@ -1,0 +1,18 @@
+/*===== Block Page Download =====*/
+.block-page-download {
+	& .block-title {
+	  color: #FF0000;
+	  font-weight: bold;
+	  text-align: center;
+	  font-size: 24px;
+	  margin-bottom: 50px;
+	}
+	& .img {
+	  margin-bottom: 20px;
+	}
+	& .txt {
+	  color: #FF0000;
+	  font-weight: bold;
+	  font-size: 24px;
+	}
+}

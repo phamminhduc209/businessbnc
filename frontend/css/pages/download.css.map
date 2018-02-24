@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,mCAAmC;AAElC,iCAAe;EACb,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,IAAI;AAErB,yBAAO;EACL,aAAa,EAAE,IAAI;AAErB,yBAAO;EACL,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI",
+"sources": ["../../sass/pages/download.scss"],
+"names": [],
+"file": "download.css"
+}
