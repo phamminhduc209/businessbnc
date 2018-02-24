@@ -24,21 +24,6 @@
   }
 }
 
-.block-main-header {
-  & .main-header {
-    & .logo,
-    & .logo:hover {
-      background-color: #FF0000;
-    }
-    & .navbar {
-      background-color: #FF6969;
-      & .sidebar-toggle:hover {
-        background-color: #FF6969;
-      }
-    }
-  } 
-}
-
 .skin-red-light {
   & .wrapper,
   & .main-sidebar,
@@ -54,6 +39,21 @@
       display: none;
     }
   }
+  .block-main-header {
+  & .logo {
+    height: 51px;
+    background: #FF0000;
+    &:hover {
+      background-color: #FF0000;
+    }
+  }
+  & .navbar {
+    background-color: #FF6969;
+    & .sidebar-toggle:hover {
+      background-color: #FF6969;
+    }
+  }
+}
 }
 
 .skin-red-light {

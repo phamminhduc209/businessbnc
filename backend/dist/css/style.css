@@ -9,13 +9,6 @@
 .sidebar-mini.sidebar-collapse .block-main-header .logo > .logo-mini {
   font-size: 0; }
 
-.block-main-header .main-header .logo, .block-main-header .main-header .logo:hover {
-  background-color: #FF0000; }
-.block-main-header .main-header .navbar {
-  background-color: #FF6969; }
-  .block-main-header .main-header .navbar .sidebar-toggle:hover {
-    background-color: #FF6969; }
-
 .skin-red-light .wrapper, .skin-red-light .main-sidebar, .skin-red-light .left-side {
   background-color: #ECF0F5;
   border: none; }
@@ -23,6 +16,15 @@
   display: none; }
 .skin-red-light .content-header > .breadcrumb {
   display: none; }
+.skin-red-light .block-main-header .logo {
+  height: 51px;
+  background: #FF0000; }
+  .skin-red-light .block-main-header .logo:hover {
+    background-color: #FF0000; }
+.skin-red-light .block-main-header .navbar {
+  background-color: #FF6969; }
+  .skin-red-light .block-main-header .navbar .sidebar-toggle:hover {
+    background-color: #FF6969; }
 
 .skin-red-light .block-menu > li.treeview {
   margin-top: 15px;
@@ -143,6 +145,46 @@
   top: -2px;
   right: 0px; }
 
+@media (max-width: 900px) {
+  .sidebar-toggle {
+    display: none; }
+
+  .main-sidebar, .left-side {
+    width: 50px !important;
+    -webkit-transform: translate(0, 0) !important;
+    -ms-transform: translate(0, 0) !important;
+    -o-transform: translate(0, 0) !important;
+    transform: translate(0, 0) !important; }
+
+  .sidebar-menu > li > a > span {
+    display: none !important; }
+
+  .content-wrapper, .right-side, .main-footer {
+    margin-left: 50px !important; } }
+@media (max-width: 767px) {
+  .navbar-nav > .user-menu .user-image {
+    width: 30px !important;
+    height: 30px !important; }
+
+  .block-new-form-top .col-sm-4 {
+    margin-top: 5px; }
+
+  .new-form-bottom .col-sm-4 {
+    width: calc(100% - 30px); }
+
+  .block-sell,
+  .block-chart {
+    margin-bottom: 10px; }
+
+  .block-new-form-top .col-sm-4 .row {
+    margin-left: 0px;
+    margin-right: 0px; } }
+@media (max-width: 480px) {
+  .new-form-bottom .new-form-content span {
+    font-size: 20px; }
+
+  .signin_wrapper .block-side-right {
+    width: 100%; } }
 /*****PAGE*****/
 .block-new-form-top {
   padding: 15px; }
@@ -358,6 +400,23 @@
   height: 335px;
   overflow: hidden; }
 
+@media (max-width: 767px) {
+  .block-new-form-top .col-sm-4 {
+    margin-top: 5px; }
+
+  .new-form-bottom .col-sm-4 {
+    width: calc(100% - 30px); }
+
+  .block-sell,
+  .block-chart {
+    margin-bottom: 10px; }
+
+  .block-new-form-top .col-sm-4 .row {
+    margin-left: 0px;
+    margin-right: 0px; } }
+@media (max-width: 480px) {
+  .new-form-bottom .new-form-content span {
+    font-size: 20px; } }
 body.login {
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
@@ -574,6 +633,9 @@ body.login {
   background-color: #2196f3;
   border: 1px solid transparent; }
 
+@media (max-width: 480px) {
+  .signin_wrapper .block-side-right {
+    width: 100%; } }
 /* Menber - Tree */
 .block-tree {
   position: relative; }

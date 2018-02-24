@@ -253,3 +253,11 @@ body.login {
     }
   }
 }
+
+@media (max-width: 480px) {
+  .signin_wrapper {
+    & .block-side-right {
+      width: 100%;
+    }
+  }
+}
