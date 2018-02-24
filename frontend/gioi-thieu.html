@@ -17,9 +17,8 @@
 	<!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
 
-	<!-- ===== CSS ===== -->
+	<!-- ===== Style CSS ===== -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 
   	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -198,41 +197,6 @@
 	<script src="lib/mmenu/jquery.mmenu.all.js"></script>
     <!-- Js Common -->
 	<script src="js/common.js"></script>
-	<script>
-		new WOW({
-			boxClass:     'wow',      // default
-			animateClass: 'animated', // default
-			offset:       0,          // default
-			mobile:       false,       // default
-			live:         true        // default
-		}).init();
-	</script>
-	<script type="text/javascript">
-	$(function() {
-	    $("#menu")
-	        .mmenu({
-	            extensions: ["theme-black", "listview-huge", "fx-panels-slide-100", "fx-listitems-slide", "fx-menu-slide", "border-offset"],
-	            navbar: {
-	                // title: 'Menu'
-	            },
-	            onClick: {
-	                close: true
-	            },
-	            navbars: [{
-	                // position: 'top',
-	                content: [
-	                    'prev',
-	                    'title',
-	                    'close'
-	                ]
-	            }]                
-	        });
-        var API = $("nav#menu").data( "mmenu" );
-        $("#menu #a-mb").click(function() {
-            API.close();
-        });
-	});
-	</script>
 </body>
 </body>
 </html>

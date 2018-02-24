@@ -24,3 +24,15 @@ footer {
     }
   }
 }
+
+/*----------------
+[Styles for devices min 767px
+*/
+@media (max-width: 767px) {
+  footer {
+    text-align: left;
+  }
+  footer .nav-link-footer li {
+    float: left;
+  }
+}

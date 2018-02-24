@@ -85,3 +85,36 @@
   top: -2px;
   right: 0px;
 }
+
+/*----------------
+[Styles for devices min 767px
+*/
+@media (max-width: 991px) and (min-width: 767px) {
+  .block-header-desktop ul {
+    padding-left: 100px;
+  }
+  .block-header-desktop .navbar-nav>li>a {
+    padding: 0px 10px;
+  }
+}
+
+/*----------------
+[Styles for devices min 767px
+*/
+@media (max-width: 767px) {
+  .block-header-mobile {
+    display: block;
+  }
+  .block-header-desktop {
+    display: none;
+  }
+  .logo-header {
+    position: absolute;
+    left: 60px;
+    top: 0px;
+  }
+  .language {
+    top: 7px;
+    right: 10px;
+  }
+}

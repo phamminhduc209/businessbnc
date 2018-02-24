@@ -3,10 +3,8 @@
  * 1. Slide Carousel
  * 2. Scroll to Top
  * 3. Sticky Menu
- * 4. Accordion has icon
- * 5. Hover tag a show ul page Product
- * 6. POPUP order a product - check on info Payment
- * 7. Scroll News Item Tablet & Mobile
+ * 4. WOW
+ * 5. Menu Mobile
  */
 
   (function($){
@@ -59,12 +57,40 @@
   });
 
   /*
-   * 7. Main Menu
+   * 4. WOW
   */
-  $(".nav-toogle").on( 'click', function() {
-    $(this).toggleClass('has-open');
-    $(".menu").toggleClass("has-open");
-    $("body").toggleClass("menu-open");
+  new WOW({
+    boxClass:     'wow',      // default
+    animateClass: 'animated', // default
+    offset:       0,          // default
+    mobile:       false,       // default
+    live:         true        // default
+  }).init();
+
+  /*
+   * 5. Menu Mobile
+  */
+  $("#menu")
+    .mmenu({
+      extensions: ["theme-black", "listview-huge", "fx-panels-slide-100", "fx-listitems-slide", "fx-menu-slide", "border-offset"],
+      navbar: {
+          // title: 'Menu'
+      },
+      onClick: {
+          close: true
+      },
+      navbars: [{
+        // position: 'top',
+        content: [
+          'prev',
+          'title',
+          'close'
+        ]
+      }]                
+    });
+  var API = $("nav#menu").data( "mmenu" );
+  $("#menu #a-mb").click(function() {
+      API.close();
   });
 
 })(jQuery); // End of use strict
