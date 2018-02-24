@@ -15,7 +15,7 @@ footer {
     }
   & .block-social {
     & a i {
-        font-size: 18px!important;
+        font-size: 18px;
         margin: 0px 15px;
         margin-top: 3px;
     }
@@ -26,7 +26,27 @@ footer {
 }
 
 /*----------------
-[Styles for devices min 767px
+[Styles for devices min 768px and max 991px
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+  footer {
+    text-align: left;
+    font-size: 12px;
+  }
+  footer .nav-link-footer li {
+    float: left;
+    margin: 0 3px;
+    & a {
+      font-size: 11px;
+    }
+  }
+  footer .block-social a i {
+    font-size: 14px;
+  }
+}
+
+/*----------------
+[Styles for devices max 767px
 */
 @media (max-width: 767px) {
   footer {

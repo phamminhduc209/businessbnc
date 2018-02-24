@@ -90,7 +90,7 @@
 [Styles for devices min 767px
 */
 @media (max-width: 991px) and (min-width: 767px) {
-  .block-header-desktop ul {
+  .block-header-desktop .navbar-nav {
     padding-left: 100px;
   }
   .block-header-desktop .navbar-nav>li>a {
