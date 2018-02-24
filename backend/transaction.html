@@ -27,8 +27,8 @@
         <!-- Bootstrap wysihtml5 - text editor -->
         <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
         <link rel="stylesheet" href="plugins/animate/animate.css">
-        <!-- Common CSS -->
-        <link rel="stylesheet" href="dist/css/common.css">
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="dist/css/style.css">
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="dist/css/responsive.css">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -168,13 +168,13 @@
                 <section class="content">
                     <div class="account_right" id="account_right">
                         <ul class="nav nav-tabs ui-sortable-handle">
-                            <li><a href="#CashAccount" data-toggle="tab"> <i class="fa fa-user"></i> CASH</a></li>
+                            <li class="active"><a href="#CashAccount" data-toggle="tab"> <i class="fa fa-user"></i> CASH</a></li>
                             <li><a href="#BecAccount" data-toggle="tab"><i class="fa fa-key "></i> BNC</a></li>
                             <li><a href="#LnnAccount" data-toggle="tab"><i class="fa fa-lock "></i> Daily profits</a></li>
-                            <li class="active"><a href="#TradeAccount" data-toggle="tab"><i class="fa fa-lock "></i> Transaction money</a></li>
+                            <li><a href="#TradeAccount" data-toggle="tab"><i class="fa fa-lock "></i> Transaction money</a></li>
                         </ul>
                         <div class="tab-content no-padding">
-                            <div class="tab-pane" id="CashAccount">
+                            <div class="tab-pane active" id="CashAccount">
                                 <div class="box box-primary form-horizontal">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -469,7 +469,7 @@
                                                 <div class="col-sm-6"></div>
                                             </div>
                                             <div class="clearfix">
-                                                <div class="table-repsonsive">
+                                                <div class="table-responsive">
                                                     <table class="table table-hover table-striped dataTable no-footer" id="trade_cash" role="grid" aria-describedby="lstdt_info">
                                                         <thead>
                                                             <tr>
@@ -640,7 +640,7 @@
                                     </div>
                                 </div>
                             </div><!-- /#LnnAccount -->
-                            <div class="box-default tab-pane active" id="TradeAccount">
+                            <div class="box-default tab-pane" id="TradeAccount">
                                 <div class="box form-horizontal">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -795,7 +795,7 @@
                                                 <div class="col-sm-6"></div>
                                             </div>
                                             <div class="clearfix">
-                                                <div class="table-repsonsive">
+                                                <div class="table-responsive">
                                                     <table class="table table-hover table-striped no-footer">
                                                         <thead>
                                                             <tr>

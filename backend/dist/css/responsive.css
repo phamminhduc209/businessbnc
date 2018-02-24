@@ -31,6 +31,10 @@
   .block-chart {
     margin-bottom: 10px;
   }
+  .block-new-form-top .col-sm-4 .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 @media (max-width: 480px) {
