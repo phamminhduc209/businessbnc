@@ -52,14 +52,14 @@ body {
 }
 .block {
   margin-bottom: 10px;
-}
-.block:before,
-.block:after {
-  content: "";
-  display: table;
-}
-.block:after {
-  clear: both;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }
 .wrapper {
   display: block;

@@ -1,0 +1,56 @@
+@mixin box-shadow($left, $top, $radius, $color) {
+	box-shadow: $left $top $radius $color;
+	-webkit-box-shadow: $left $top $radius $color;
+	-moz-box-shadow: $left $top $radius $color;
+}
+
+@mixin transition($property, $duration, $easing: linear) {
+	transition: $property $duration $easing;
+	-webkit-transition: $property $duration $easing;
+	-moz-transition: $property $duration $easing;
+}
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+@mixin translate3d($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+     -moz-transform: translate3d($x, $y, $z);
+       -o-transform: translate3d($x, $y, $z);
+          transform: translate3d($x, $y, $z);
+}
+// Browser Prefixes
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+// Rotate
+@mixin rotate ($deg) { 
+	@include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+// Translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}

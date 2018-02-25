@@ -42,7 +42,7 @@
     <body class="hold-transition skin-red-light sidebar-mini">
         <div class="wrapper">
             <header class="main-header block-main-header">
-                <a href="#" class="logo">
+                <a href="index.html" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <span class="logo-mini"><img src="dist/img/logo-secure-2017-10-22.png"></span>
                     <!-- logo for regular state and mobile devices -->
@@ -53,11 +53,11 @@
                     <span class="sr-only">Toggle navigation</span>
                     </a>
                     <div class="navbar-custom-menu">
-                        <ul class="nav navbar-nav navbar-right m-n nav-user navleader" style="float:right;margin-right:0px;">
+                        <ul class="nav navbar-nav navbar-right m-n nav-user navleader">
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src='dist/img/avatar.png' height='100px' class='user-image'>
-                                <span class="">ĐẶNG NGỌC DUYỆN (LIENKIMBNC)</span>
+                                    <img src='dist/img/avatar.png' height='100px' class='user-image'>
+                                    <span class="">ĐẶNG NGỌC DUYỆN (LIENKIMBNC)</span>
                                 </a>
                                 <ul class="dropdown-menu animated fadeInRight">
                                     <li>
@@ -76,9 +76,6 @@
                                 </ul>
                             </li>
                         </ul>
-                        <style>
-                            .navbar-nav>.user-menu .user-image{width: 45px;height: 45px;margin-top: -12px;margin-right:5px;}
-                        </style>
                     </div>
                 </nav><!-- /.navbar navbar-static-top -->
             </header><!-- /.main-header -->
@@ -87,43 +84,43 @@
                 <section class="sidebar">
                     <ul class="sidebar-menu block-menu" data-widget="tree">
                         <li class="treeview active">
-                            <a href="#">
+                            <a href="index.html">
                                 <i class="fa fa-dashboard text-menu-cus"></i>
                                 <span>Dashboard</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="#">
+                            <a href="member.html">
                                 <i class="fa fa-sitemap text-menu-cus"></i>
                                 <span>Member</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="#">
+                            <a href="transaction.html">
                                 <i class="fa fa-exchange text-menu-cus"></i>
                                 <span>Transaction</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="#">
+                            <a href="change-info.html">
                                 <i class="fa fa-user text-menu-cus"></i>
                                 <span>Change info</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="#">
+                            <a href="deposit.html">
                                 <i class="fa fa-money text-menu-cus"></i>
                                 <span>Deposit</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="#">
+                            <a href="transaction-history.html">
                                 <i class="fa fa-history text-menu-cus"></i>
                                 <span>Transaction history</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="#">
+                            <a href="upgrade-package.html">
                                 <i class="fa fa-external-link-square text-menu-cus"></i>
                                 <span>Upgrade package</span>
                             </a>
@@ -451,11 +448,13 @@
                                                     </div>
                                                 </div>
                                             </div><!-- /.chart -->
-                                            <div class="">
-                                                <span style="width:50px;border:2px solid #2196f3;display:inline-block;vertical-align:middle;"></span> Buy
-                                            </div>
-                                            <div class="">
-                                                <span style="width:50px;border:2px solid #ff5722;display:inline-block;vertical-align:middle;"></span> Sell
+                                            <div class="block-signal">
+                                                <div class="signal-cm buy">
+                                                    <span></span> Buy
+                                                </div>
+                                                <div class="signal-cm sell">
+                                                    <span></span> Sell
+                                                </div>
                                             </div>
                                         </div>
                                     </div><!-- /.row -->
@@ -486,7 +485,7 @@
                                                             </tr>
                                                         </tbody>
                                                     </table>
-                                                </div>
+                                                </div><!-- /.table-responsive -->
                                             </div>
                                             <div class="row">
                                                 <div class="col-xs-12 col-sm-5">
@@ -515,128 +514,130 @@
                                 </div>
                             </div><!-- /#BecAccount -->
                             <div class="box-default tab-pane" id="LnnAccount">
-                                <div class="table-responsive">
-                                    <table class="table table-hover table-striped dataTable no-footer">
-                                        <thead>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>Username</th>
-                                                <th>Amount received / day</th>
-                                                <th>Content</th>
-                                                <th>Date created</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>LIENKIMBNC</td>
-                                                <td>$10</td>
-                                                <td>You have been added $10 Money Profits Day</td>
-                                                <td>2018-02-23</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>LIENKIMBNC</td>
-                                                <td>$10</td>
-                                                <td>You have been added $10 Money Profits Day</td>
-                                                <td>2018-02-22</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>LIENKIMBNC</td>
-                                                <td>$10</td>
-                                                <td>You have been added $10 Money Profits Day</td>
-                                                <td>2018-02-21</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>LIENKIMBNC</td>
-                                                <td>$10</td>
-                                                <td>You have been added $10 Money Profits Day</td>
-                                                <td>2018-02-20</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>LIENKIMBNC</td>
-                                                <td>$10</td>
-                                                <td>You have been added $10 Money Profits Day</td>
-                                                <td>2018-02-19</td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>LIENKIMBNC</td>
-                                                <td>$10</td>
-                                                <td>You have been added $10 Money Profits Day</td>
-                                                <td>2018-02-18</td>
-                                            </tr>
-                                            <tr>
-                                                <td>7</td>
-                                                <td>LIENKIMBNC</td>
-                                                <td>$10</td>
-                                                <td>You have been added $10 Money Profits Day</td>
-                                                <td>2018-02-17</td>
-                                            </tr>
-                                            <tr>
-                                                <td>8</td>
-                                                <td>LIENKIMBNC</td>
-                                                <td>$10</td>
-                                                <td>You have been added $10 Money Profits Day</td>
-                                                <td>2018-02-16</td>
-                                            </tr>
-                                            <tr>
-                                                <td>9</td>
-                                                <td>LIENKIMBNC</td>
-                                                <td>$10</td>
-                                                <td>You have been added $10 Money Profits Day</td>
-                                                <td>2018-02-15</td>
-                                            </tr>
-                                            <tr>
-                                                <td>10</td>
-                                                <td>LIENKIMBNC</td>
-                                                <td>$10</td>
-                                                <td>You have been added $10 Money Profits Day</td>
-                                                <td>2018-02-14</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-5">
-                                        <div id="trade_cash_info" role="status" aria-live="polite">
-                                            Showing 1 to 1 of 1 entries
+                                <div class="box box-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-striped dataTable no-footer">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Username</th>
+                                                    <th>Amount received / day</th>
+                                                    <th>Content</th>
+                                                    <th>Date created</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>LIENKIMBNC</td>
+                                                    <td>$10</td>
+                                                    <td>You have been added $10 Money Profits Day</td>
+                                                    <td>2018-02-23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>LIENKIMBNC</td>
+                                                    <td>$10</td>
+                                                    <td>You have been added $10 Money Profits Day</td>
+                                                    <td>2018-02-22</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>LIENKIMBNC</td>
+                                                    <td>$10</td>
+                                                    <td>You have been added $10 Money Profits Day</td>
+                                                    <td>2018-02-21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>LIENKIMBNC</td>
+                                                    <td>$10</td>
+                                                    <td>You have been added $10 Money Profits Day</td>
+                                                    <td>2018-02-20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>LIENKIMBNC</td>
+                                                    <td>$10</td>
+                                                    <td>You have been added $10 Money Profits Day</td>
+                                                    <td>2018-02-19</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>LIENKIMBNC</td>
+                                                    <td>$10</td>
+                                                    <td>You have been added $10 Money Profits Day</td>
+                                                    <td>2018-02-18</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>LIENKIMBNC</td>
+                                                    <td>$10</td>
+                                                    <td>You have been added $10 Money Profits Day</td>
+                                                    <td>2018-02-17</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>LIENKIMBNC</td>
+                                                    <td>$10</td>
+                                                    <td>You have been added $10 Money Profits Day</td>
+                                                    <td>2018-02-16</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>LIENKIMBNC</td>
+                                                    <td>$10</td>
+                                                    <td>You have been added $10 Money Profits Day</td>
+                                                    <td>2018-02-15</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>LIENKIMBNC</td>
+                                                    <td>$10</td>
+                                                    <td>You have been added $10 Money Profits Day</td>
+                                                    <td>2018-02-14</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div><!-- /.table-responsive -->
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-5">
+                                            <div id="trade_cash_info" role="status" aria-live="polite">
+                                                Showing 1 to 1 of 1 entries
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-7">
-                                        <div class="block-pagination text-right" id="trade_cash_paginate">
-                                            <ul class="pagination">
-                                                <li class="paginate_button previous disabled" id="trade_cash_previous">
-                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="0" tabindex="0">Previous</a>
-                                                </li>
-                                                <li class="active">
-                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="1" tabindex="0">1</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="2" tabindex="0">2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="3" tabindex="0">3</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="4" tabindex="0">4</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="5" tabindex="0">5</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="6" tabindex="0">6</a>
-                                                </li>
-                                                <li class="next disabled" id="trade_cash_next">
-                                                    <a href="#" aria-controls="trade_cash" data-dt-idx="7" tabindex="0">Next</a>
-                                                </li>
-                                            </ul>
+                                        <div class="col-xs-12 col-sm-7">
+                                            <div class="block-pagination text-right" id="trade_cash_paginate">
+                                                <ul class="pagination">
+                                                    <li class="paginate_button previous disabled" id="trade_cash_previous">
+                                                        <a href="#" aria-controls="trade_cash" data-dt-idx="0" tabindex="0">Previous</a>
+                                                    </li>
+                                                    <li class="active">
+                                                        <a href="#" aria-controls="trade_cash" data-dt-idx="1" tabindex="0">1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" aria-controls="trade_cash" data-dt-idx="2" tabindex="0">2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" aria-controls="trade_cash" data-dt-idx="3" tabindex="0">3</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" aria-controls="trade_cash" data-dt-idx="4" tabindex="0">4</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" aria-controls="trade_cash" data-dt-idx="5" tabindex="0">5</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" aria-controls="trade_cash" data-dt-idx="6" tabindex="0">6</a>
+                                                    </li>
+                                                    <li class="next disabled" id="trade_cash_next">
+                                                        <a href="#" aria-controls="trade_cash" data-dt-idx="7" tabindex="0">Next</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div><!-- /.row -->
+                                </div>                                
                             </div><!-- /#LnnAccount -->
                             <div class="box-default tab-pane" id="TradeAccount">
                                 <div class="box form-horizontal">
@@ -808,7 +809,7 @@
                                                             <tr>
                                                                 <td>1</td>
                                                                 <td>
-                                                                    <b style="color: green">+ $900</b>                        
+                                                                    <b class="text-green">+ $900</b>                        
                                                                 </td>
                                                                 <td>bnc001</td>
                                                                 <td>You have been received $900 from members company01</td>
@@ -817,7 +818,7 @@
                                                             <tr>
                                                                 <td>2</td>
                                                                 <td>
-                                                                    <b style="color: green">+ $300</b>
+                                                                    <b class="text-green">+ $300</b>
                                                                 </td>
                                                                 <td>tuancuongbnc</td>
                                                                 <td>You have been received $300 from members NGUYỄN TUẤN CƯỜNG</td>
@@ -826,7 +827,7 @@
                                                             <tr>
                                                                 <td>3</td>
                                                                 <td>
-                                                                    <b style="color: green">+ $250</b>
+                                                                    <b class="text-green">+ $250</b>
                                                                 </td>
                                                                 <td>bnc001</td>
                                                                 <td>You have been received $250 from members company01</td>
@@ -908,11 +909,7 @@
         <script src="dist/js/adminlte.min.js"></script>
         <!-- Loader -->
         <script src="plugins/loader/loader.js"></script>
-        <script>
-            $(function () {
-                //Initialize Select2 Elements
-                $('.select2').select2()
-            })
-        </script>
+        <!-- Commom JS -->
+        <script src="dist/js/commom.js"></script>
     </body>
 </html>

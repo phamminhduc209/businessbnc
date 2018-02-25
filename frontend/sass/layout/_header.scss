@@ -3,12 +3,11 @@
   background: #fff;
   display: none;
   margin-left: 10px;
-  border-radius: 5px;
+  @include border-radius(5px);
   & .mmmenua {
     background: center center no-repeat transparent;
     display: block;
-    width: 40px;
-    height: 40px;
+    @include size(40px,40px);
     position: relative;
     top: 0;
     left: 0px;
@@ -90,11 +89,15 @@
 [Styles for devices min 767px
 */
 @media (max-width: 991px) and (min-width: 767px) {
-  .block-header-desktop .navbar-nav {
-    padding-left: 100px;
-  }
-  .block-header-desktop .navbar-nav>li>a {
-    padding: 0px 10px;
+  .block-header-desktop {
+    .navbar-nav {
+      padding-left: 100px;
+      & > li {
+        & > a {
+          padding: 0px 10px;
+        }
+      }
+    }
   }
 }
 

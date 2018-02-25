@@ -42,7 +42,7 @@
     <body class="hold-transition skin-red-light sidebar-mini">
         <div class="wrapper">
             <header class="main-header block-main-header">
-                <a href="#" class="logo">
+                <a href="index.html" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <span class="logo-mini"><img src="dist/img/logo-secure-2017-10-22.png"></span>
                     <!-- logo for regular state and mobile devices -->
@@ -53,11 +53,11 @@
                     <span class="sr-only">Toggle navigation</span>
                     </a>
                     <div class="navbar-custom-menu">
-                        <ul class="nav navbar-nav navbar-right m-n nav-user navleader" style="float:right;margin-right:0px;">
+                        <ul class="nav navbar-nav navbar-right m-n nav-user navleader">
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src='dist/img/avatar.png' height='100px' class='user-image'>
-                                <span class="">ĐẶNG NGỌC DUYỆN (LIENKIMBNC)</span>
+                                    <img src='dist/img/avatar.png' height='100px' class='user-image'>
+                                    <span class="">ĐẶNG NGỌC DUYỆN (LIENKIMBNC)</span>
                                 </a>
                                 <ul class="dropdown-menu animated fadeInRight">
                                     <li>
@@ -76,9 +76,6 @@
                                 </ul>
                             </li>
                         </ul>
-                        <style>
-                            .navbar-nav>.user-menu .user-image{width: 45px;height: 45px;margin-top: -12px;margin-right:5px;}
-                        </style>
                     </div>
                 </nav><!-- /.navbar navbar-static-top -->
             </header><!-- /.main-header -->
@@ -87,43 +84,43 @@
                 <section class="sidebar">
                     <ul class="sidebar-menu block-menu" data-widget="tree">
                         <li class="treeview active">
-                            <a href="#">
+                            <a href="index.html">
                                 <i class="fa fa-dashboard text-menu-cus"></i>
                                 <span>Dashboard</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="#">
+                            <a href="member.html">
                                 <i class="fa fa-sitemap text-menu-cus"></i>
                                 <span>Member</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="#">
+                            <a href="transaction.html">
                                 <i class="fa fa-exchange text-menu-cus"></i>
                                 <span>Transaction</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="#">
+                            <a href="change-info.html">
                                 <i class="fa fa-user text-menu-cus"></i>
                                 <span>Change info</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="#">
+                            <a href="deposit.html">
                                 <i class="fa fa-money text-menu-cus"></i>
                                 <span>Deposit</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="#">
+                            <a href="transaction-history.html">
                                 <i class="fa fa-history text-menu-cus"></i>
                                 <span>Transaction history</span>
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href="#">
+                            <a href="upgrade-package.html">
                                 <i class="fa fa-external-link-square text-menu-cus"></i>
                                 <span>Upgrade package</span>
                             </a>
@@ -166,12 +163,12 @@
                 <section class="content">
                     <div class="account_right" id="account_right">
                         <ul class="nav nav-tabs ui-sortable-handle">
-                            <li><a href="#CashLive" data-toggle="tab" aria-expanded="true"> <i class="fa fa-money"></i> Commission</a></li>
-                            <li class="active"><a href="#CashCouple" data-toggle="tab" aria-expanded="false"> <i class="fa fa-money"></i> Money balance pair</a></li>
+                            <li class="active><a href="#CashLive" data-toggle="tab" aria-expanded="true"> <i class="fa fa-money"></i> Commission</a></li>
+                            <li"><a href="#CashCouple" data-toggle="tab" aria-expanded="false"> <i class="fa fa-money"></i> Money balance pair</a></li>
                             <li class=""><a href="#CashRank" data-toggle="tab" aria-expanded="false"> <i class="fa fa-money"></i> Money title</a></li>
                         </ul>
                         <div class="tab-content no-padding">
-                            <div class="box box-primary tab-pane" id="CashLive">
+                            <div class="box box-primary tab-pane active" id="CashLive">
                                 <div class="box-body">
                                     <div class="row">
                                         <div class="col-sm-6"></div>
@@ -197,7 +194,7 @@
                                                             <td>LIENKIMBNC</td>
                                                             <td>pmd123</td>
                                                             <td>
-                                                                <b style="color:green">+ $8</b>
+                                                                <b class="text-green">+ $8</b>
                                                             </td>
                                                             <td><b>You have been added 16% Direct money $ 8 when creating new members</b>
                                                             </td>
@@ -208,7 +205,7 @@
                                                             <td>LIENKIMBNC</td>
                                                             <td>pmd123</td>
                                                             <td>
-                                                                <b style="color:red">- $50</b>
+                                                                <b class="text-red">- $50</b>
                                                             </td>
                                                             <td><b>You have been deducted $ 50  for created new members</b>
                                                             </td>
@@ -242,8 +239,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="box box-primary tab-pane active" id="CashCouple">
+                            </div><!-- /#CashLive -->
+                            <div class="box box-primary tab-pane" id="CashCouple">
                                 <div class="box-body">
                                     <div class="row">
                                         <div class="col-sm-6"></div>
@@ -295,7 +292,7 @@
                                         </div>
                                     </div><!-- /.row -->
                                 </div><!-- /.box-body -->
-                            </div>
+                            </div><!-- /#CashCouple -->
                             <div class="box box-primary tab-pane" id="CashRank">
                                 <div class="box-body">
                                     <div class="row">
@@ -348,7 +345,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div><!-- /#CashRank -->
                         </div>
                     </div><!-- /.account_right #account_right -->
                 </section><!-- /.content -->
@@ -395,11 +392,7 @@
         <script src="dist/js/adminlte.min.js"></script>
         <!-- Loader -->
         <script src="plugins/loader/loader.js"></script>
-        <script>
-            $(function () {
-                //Initialize Select2 Elements
-                $('.select2').select2()
-            })
-        </script>
+        <!-- Commom JS -->
+        <script src="dist/js/commom.js"></script>
     </body>
 </html>

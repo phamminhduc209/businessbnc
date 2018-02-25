@@ -3,9 +3,11 @@ footer {
   background: #22313F;
   color: #fff;
   text-align: right;
-  & .nav-link-footer li {
-    display: inline-block;
-    margin: 0 10px;
+  & .nav-link-footer {
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
   }
   & a {
       color: #fff;
@@ -32,16 +34,22 @@ footer {
   footer {
     text-align: left;
     font-size: 12px;
-  }
-  footer .nav-link-footer li {
-    float: left;
-    margin: 0 3px;
-    & a {
+    .nav-link-footer {
+      li {
+        float: left;
+        margin: 0 3px;
+      }
+    }
+    a {
       font-size: 11px;
     }
-  }
-  footer .block-social a i {
-    font-size: 14px;
+    .block-social {
+      a {
+        i {
+          font-size: 14px;
+        }
+      }
+    }
   }
 }
 
@@ -51,8 +59,10 @@ footer {
 @media (max-width: 767px) {
   footer {
     text-align: left;
-  }
-  footer .nav-link-footer li {
-    float: left;
+    .nav-link-footer {
+      li {
+        float: left;
+      }
+    }
   }
 }

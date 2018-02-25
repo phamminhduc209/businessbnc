@@ -25,6 +25,14 @@
   background-color: #FF6969; }
   .skin-red-light .block-main-header .navbar .sidebar-toggle:hover {
     background-color: #FF6969; }
+  .skin-red-light .block-main-header .navbar .navbar-custom-menu .navbar-nav {
+    float: right;
+    margin-right: 0px; }
+    .skin-red-light .block-main-header .navbar .navbar-custom-menu .navbar-nav .user-menu .user-image {
+      width: 45px;
+      height: 45px;
+      margin-top: -12px;
+      margin-right: 5px; }
 
 .skin-red-light .block-menu > li.treeview {
   margin-top: 15px;
@@ -70,6 +78,72 @@
 
 .box-tools {
   display: none; }
+
+/* Margin Right */
+.mr05 {
+  margin-right: 5px; }
+
+.mr10 {
+  margin-right: 10px; }
+
+.mr15 {
+  margin-right: 15px; }
+
+.mr20 {
+  margin-right: 20px; }
+
+.mr25 {
+  margin-right: 25px; }
+
+.mr30 {
+  margin-right: 30px; }
+
+.mr35 {
+  margin-right: 35px; }
+
+.mr40 {
+  margin-right: 40px; }
+
+.mr45 {
+  margin-right: 45px; }
+
+.mr50 {
+  margin-right: 50px; }
+
+/* Margin Left */
+.ml05 {
+  margin-left: 5px !important; }
+
+.ml10 {
+  margin-left: 10px !important; }
+
+.ml15 {
+  margin-left: 15px !important; }
+
+.ml20 {
+  margin-left: 20px !important; }
+
+.ml25 {
+  margin-left: 25px !important; }
+
+.ml30 {
+  margin-left: 30px !important; }
+
+.ml35 {
+  margin-left: 35px !important; }
+
+.ml40 {
+  margin-left: 40px !important; }
+
+.ml45 {
+  margin-left: 45px !important; }
+
+.ml50 {
+  margin-left: 50px !important; }
+
+/* Select2 Width 100% */
+.selectw100 .select2 {
+  width: 100% !important; }
 
 /*****LAYOUT*****/
 .block-header-mobile {
@@ -370,6 +444,8 @@
   background: -ms-linear-gradient(bottom, #39cccc, #7adddd) !important;
   background: -moz-linear-gradient(center bottom, #39cccc 0, #7adddd 100%) !important;
   background: -o-linear-gradient(#7adddd, #39cccc) !important; }
+.block-chart #line-chart {
+  height: 250px; }
 .block-chart .box-footer {
   border: 3px solid #D6712B !important;
   padding: 0px; }
@@ -790,5 +866,16 @@ body.login {
       border-radius: 0 5px 0 0;
       -webkit-border-radius: 0 5px 0 0;
       -moz-border-radius: 0 5px 0 0; }
+
+.block-signal .signal-cm span {
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 2px; }
+.block-signal .buy span {
+  border-color: #2196f3; }
+.block-signal .sell span {
+  border-color: #ff5722; }
 
 /*# sourceMappingURL=style.css.map */

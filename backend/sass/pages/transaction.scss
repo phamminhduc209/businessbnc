@@ -1,0 +1,15 @@
+.block-signal {
+	& .signal-cm span {
+		width:50px;
+		display:inline-block;
+		vertical-align:middle;
+		border-style: solid;
+		border-width: 2px;
+	}
+	& .buy span {
+		border-color: #2196f3;
+	}
+	& .sell span {
+		border-color: #ff5722;
+	}
+}
