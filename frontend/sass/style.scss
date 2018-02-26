@@ -1,8 +1,9 @@
 @charset "utf-8";
+/*****HELPERS*****/
+@import "helpers/_mixins.scss";
 /*****BASE*****/
 @import "base/reset";
 @import "base/common";
-@import "base/mixins";
 /*****LAYOUT*****/
 @import "layout/header";
 @import "layout/footer";

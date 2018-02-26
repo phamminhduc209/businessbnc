@@ -109,27 +109,41 @@
     width: 30px !important;
     height: 30px !important;
   }
-  .block-new-form-top .col-sm-4 {
-    margin-top: 5px;
+  .block-new-form-top {
+    .col-sm-4 {
+      margin-top: 5px;
+    }
   }
-  .new-form-bottom .col-sm-4 {
-    width: calc(100% - 30px);
+  .new-form-bottom {
+    .col-sm-4 {
+      width: calc(100% - 30px);
+    }
   }
   .block-sell,
   .block-chart {
     margin-bottom: 10px;
   }
-  .block-new-form-top .col-sm-4 .row {
-    margin-left: 0px;
-    margin-right: 0px;
+  .block-new-form-top {
+    .col-sm-4 {
+      .row {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+    }
   }
 }
 
 @media (max-width: 480px) {
-  .new-form-bottom .new-form-content span {
-    font-size: 20px;
+  .new-form-bottom {
+    .new-form-content {
+      span {
+        font-size: 20px;
+      }
+    }
   }
-  .signin_wrapper .block-side-right {
-    width: 100%;
+  .signin_wrapper {
+    .block-side-right {
+      width: 100%;
+    }
   }
 }

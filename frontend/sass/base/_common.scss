@@ -1,7 +1,7 @@
 .hidedesktop.is-sticky .block-header-fixed {
 	z-index: 99;
-	@include transition(.3s);
-	@include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.12));
+	@include transition(all, .3s);
+	@include box-shadow(0, 1px, 4px, 0 rgba(0, 0, 0, 0.12));
 }
 /*===== Back To Top =====*/
 .td-scroll-up {
@@ -33,7 +33,7 @@
 	}
 	&:hover {
 		text-decoration: none;
-		@include transition(all .3s);
+		@include transition(all, .3s);
 	}
 	&:focus {
 		text-decoration: none;
@@ -46,7 +46,7 @@
   padding: 60px 0;
 }
 /*----------------
-[Styles for devices max 767px
+[Styles for devices min 767px
 */
 @media (max-width: 767px) {
   .hidedesktop {

@@ -9,7 +9,7 @@
   color: #fff;
   text-align: center;
   padding: 5px 0px;
-  border-radius: 5px;
+  @include border-radius(5px);
   margin-bottom: 20px;
 }
 
@@ -17,23 +17,22 @@
   margin-bottom: 20px;
   & .new-form-content {
     height: 100px;
-    border-radius: 50%;
+    @include border-radius(50%);
     background: #FABD93;
     border: 3px solid #FABD93;
   }
 }
 
 .new-form-content {
-  height: 50px;
   background: #fff;
   float: left;
-  width: 100%;
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 15px;
   position: relative;
-  border-radius: 5px;
+  @include border-radius(5px);
+  @include size(100%,50px);
   border: 3px solid #FACA83;
   padding: 0px 5px;
   & span {
@@ -77,24 +76,21 @@
     background: #ED7D31;
     position: relative;
     border-radius: 0px;
-    &:before {
+    @include border-radius(0px);
+    &:before,
+    &:after {
       content: "";
       position: absolute;
-      width: 0px;
-      height: 0px;
+      @include size(0,0);
       border-bottom: 50px solid transparent;
       border-top: 50px solid transparent;
+    }
+    &:before {
       border-left: 30px solid #ECF0F5;
       left: -3px;
       top: -3px;
     }
     &:after {
-      content: "";
-      position: absolute;
-      width: 0px;
-      height: 0px;
-      border-bottom: 50px solid transparent;
-      border-top: 50px solid transparent;
       border-left: 30px solid #ED7D31;
       right: -33px;
       top: -3px;
@@ -138,17 +134,13 @@
     border-top: none;
   }
   & .boxView {
-    border-radius: 5px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+    @include border-radius(5px);
+    // @include box-shadow(none);
+    @include transition(box-shadow, .3s, ease);
     border: 3px solid #ED7D31;
     text-align: center;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    @include box-sizing(border-box);
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-    transition: box-shadow .3s ease;
     padding: 10px 2px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -191,13 +183,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    @include translate(-50%,-50%);
+    @include border-radius(5px);
     background: #E1E1E1;
     border: 3px solid #fff;
-    border-radius: 5px;
     font-weight: 600;
     padding: 10px 15px;
     z-index: 99999;
@@ -223,9 +212,6 @@
     background: -moz-linear-gradient(center bottom, #39cccc 0, #7adddd 100%) !important;
     background: -o-linear-gradient(#7adddd, #39cccc) !important;
   }
-  & #line-chart {
-    height: 250px;
-  }
   & .box-footer {
     border: 3px solid #D6712B!important;
     padding: 0px;
@@ -246,7 +232,7 @@
 .block-lasted {
   & .box {
     border: 5px solid #5B9BD5;
-    border-radius: 0px;
+    @include border-radius(0);
     border-top-color: #6bb3dd !important;
     margin-bottom: 0;
     & .box-header {

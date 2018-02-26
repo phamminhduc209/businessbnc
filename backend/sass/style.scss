@@ -1,4 +1,6 @@
 @charset "utf-8";
+/*****HELPERS*****/
+@import "helpers/mixins";
 /*****BASE*****/
 @import "base/reset";
 @import "base/common";
@@ -9,4 +11,3 @@
 @import "pages/index";
 @import "pages/login";
 @import "pages/member";
-@import "pages/transaction";

@@ -54,3 +54,8 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
   filter: alpha(opacity=$IEValue);
 }
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
