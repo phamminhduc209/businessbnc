@@ -1,0 +1,38 @@
+.block-signal {
+	& .signal-cm {
+		& span {
+			width:50px;
+			display:inline-block;
+			vertical-align:middle;
+			border-style: solid;
+			border-width: 2px;
+		}
+	}
+	& .buy {
+		& span {
+			border-color: #2196f3;
+		}
+	}
+	& .sell {
+		& span {
+			border-color: #ff5722;
+		}
+	}
+}
+
+#revenue-chart {
+	position: relative;
+	height: 400px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	& .morris-default-style {
+		left: 63.8398px;
+		top: 225px;
+		display: none;
+		& .morris-hover-point-sell {
+			color: #ff5722;
+		}
+		& .morris-hover-point-buy {
+			color: #2196f3;
+		}
+	}
+}

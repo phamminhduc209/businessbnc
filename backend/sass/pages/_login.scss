@@ -1,20 +1,15 @@
-body.login {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: #e8ebf1;
-  text-rendering: optimizeLegibility;
-  text-rendering: geometricPrecision;
-  font-smooth: always;
-  font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased;
-  -webkit-font-smoothing: subpixel-antialiased;
-  min-height: 100%;
+body {
+  &.login {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #e8ebf1;
+    min-height: 100%;
+  }
 }
 /* Page Login */
 .signin_wrapper {
@@ -120,7 +115,7 @@ body.login {
 
 .form-login {
   & .block-forget {
-    text-align: right;
+    text-align: center;
     margin-top: 50px;
     margin-bottom: 20px;
     & a {
@@ -145,6 +140,7 @@ body.login {
     }
   }
 }
+
 /* Modal */
 .login {
   & .modal {

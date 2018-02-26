@@ -33,9 +33,11 @@
     font-weight: bold;
     position: relative;
   }
-  & .img-level2 img {
-    width: 60px;
-    height: 60px;
+  & .img-level2 {
+    & img {
+      width: 60px;
+      height: 60px;
+    }
   }
   & .img-npp {
     color: #423D3A;
@@ -127,7 +129,7 @@
       top: 5px;
       left: 50%;
       border-left: 1px dotted #333;
-      @incude size(0,20px);
+      @include size(0,20px);
     }
     & .block-modal-addMember {
       float: left;
