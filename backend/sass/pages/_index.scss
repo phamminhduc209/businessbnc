@@ -204,8 +204,8 @@
     @include gradient(#7adddd, #39cccc);
   }
   & .box-footer {
-    border: 3px solid #D6712B;
-    padding: 0;
+      border: 3px solid #D6712B !important;
+      padding: 0;
     & .col-xs-6 {
       &:first-child {
         border-right: 3px solid #D6712B;
@@ -216,8 +216,15 @@
       margin-bottom: -4px;
     }
     & .knob-label {
-      font-size: 25px ;
+      font-size: 25px;
+      text-align: center;
+      color: #333;
+      font-weight: 100;
+      margin-bottom: 0.3em;
     }
+  }
+  & #line-chart {
+    height: 250px;
   }
 }
 
@@ -241,8 +248,9 @@
   }
   & .listtransaction {
     display: block;
-    height: 335px;
+    height: 320px;
     overflow: hidden;
+    margin-bottom: 19px;
   }
 }
 
