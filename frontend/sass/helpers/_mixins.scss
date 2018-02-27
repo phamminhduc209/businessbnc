@@ -1,26 +1,48 @@
+// Box Shadow
 @mixin box-shadow($left, $top, $radius, $color) {
 	box-shadow: $left $top $radius $color;
 	-webkit-box-shadow: $left $top $radius $color;
 	-moz-box-shadow: $left $top $radius $color;
 }
 
+// Transition
 @mixin transition($property, $duration, $easing: linear) {
 	transition: $property $duration $easing;
 	-webkit-transition: $property $duration $easing;
 	-moz-transition: $property $duration $easing;
 }
 
+// Border Radius
 @mixin border-radius($radius) {
 	border-radius: $radius;
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 }
+
+// Border Radius Top, Left, Bottom, Right
+@mixin border-radius-corner($topleft, $topright, $bottomright, $bottomleft) {
+	border-top-left-radius: $topleft;
+	border-top-right-radius: $topright;
+	border-bottom-right-radius: $bottomright;
+	border-bottom-left-radius: $bottomleft;
+	-webkit-border-top-left-radius: $topleft;
+	-webkit-border-top-right-radius: $topright;
+	-webkit-border-bottom-right-radius: $bottomright;
+	-webkit-border-bottom-left-radius: $bottomleft;
+	-moz-border-radius-topleft: $topleft;
+	-moz-border-radius-topright: $topright;
+	-moz-border-radius-bottomright: $bottomright;
+	-moz-border-radius-bottomleft: $bottomleft;
+}
+
+// Translate3d
 @mixin translate3d($x, $y, $z) {
   -webkit-transform: translate3d($x, $y, $z);
      -moz-transform: translate3d($x, $y, $z);
        -o-transform: translate3d($x, $y, $z);
           transform: translate3d($x, $y, $z);
 }
+
 // Browser Prefixes
 @mixin transform($transforms) {
 	-webkit-transform: $transforms;
@@ -43,11 +65,15 @@
 @mixin translate ($x, $y) {
 	@include transform(translate($x, $y));
 }
+
+// Box Sizing
 @mixin box-sizing($box-model) {
   -webkit-box-sizing: $box-model; // Safari <= 5
      -moz-box-sizing: $box-model; // Firefox <= 19
           box-sizing: $box-model;
 }
+
+// Opacity
 @mixin opacity($value){
   $IEValue: $value*100;
   opacity: $value;
@@ -55,7 +81,16 @@
   filter: alpha(opacity=$IEValue);
 }
 
+// Size
 @mixin size($width, $height) {
   width: $width;
   height: $height;
+}
+
+// Background Gradient
+@mixin gradient($color1, $color2) {
+	background-color: $color1;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$color1}, endColorstr=#{$color2});
+	background-image: -moz-linear-gradient(center top, $color1, $color2);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color1), to($color2));
 }

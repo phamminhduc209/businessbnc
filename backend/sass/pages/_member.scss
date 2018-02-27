@@ -62,7 +62,7 @@
     @include translate(0, 0);
     @include transition(all, .3s);
     @include opacity(0);
-    background: linear-gradient(to bottom, #333 10%, #333 100%);
+    @include gradient(#333, #333);
     z-index: 9;
     visibility: hidden;
   }
@@ -107,7 +107,7 @@
           float: left;
           width: 160px;
           color: #fff;
-          padding-left: 0px;
+          padding-left: 0;
           padding-top: 4px;
         }
       }

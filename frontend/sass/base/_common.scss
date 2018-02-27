@@ -15,10 +15,7 @@
 	background-color: #d9534f;
 	border-color: #d43f3a;
 	z-index: 1;
-	-webkit-transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
-	-moz-transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
-	-o-transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
-	transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+	@include transition(transform, 0.4s, cubic-bezier(0.55, 0, 0.1, 1) 0s);
 	&.td-scroll-up-visible {
 		@include translate3d(0, 0, 0);
 	}

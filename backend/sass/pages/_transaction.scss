@@ -1,7 +1,7 @@
 .block-signal {
 	& .signal-cm {
 		& span {
-			width:50px;
+			@include size(50px, auto);
 			display:inline-block;
 			vertical-align:middle;
 			border-style: solid;
@@ -22,7 +22,7 @@
 
 #revenue-chart {
 	position: relative;
-	height: 400px;
+	@include size(100%, 400px);
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	& .morris-default-style {
 		left: 63.8398px;
