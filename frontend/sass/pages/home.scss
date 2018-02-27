@@ -16,8 +16,7 @@
   	position: absolute;
 	  top: 50%;
 	  @include translate3d(0, -50%, 0);
-	  width: 32px;
-	  height: 32px;
+	  @include size(32px,32px);
 	  text-align: center;
 	  background: #6C6A6A;
 	  @include border-radius(100%);
@@ -61,8 +60,7 @@
 		  display: inline-block;
 		  background: #666;
 		  text-indent: -9999px; 
-		  width: 10px;
-		  height: 10px;
+		  @include size(10px,10px);
 		  margin: 0 5px;
 		  outline: 0;
 		  @include border-radius(5px);
@@ -128,8 +126,7 @@
   margin-top: 10px;
   & .owl-dot {
 	  display: inline-block;
-	  width: 15px;
-	  height: 5px;
+	  @include size(15px,5px);
 	  margin: 5px 7px;
 	  background: #D6D6D6;
 	  @include transition(opacity, 200ms, ease);
@@ -150,7 +147,7 @@
 	}
 	& h2 {
 	  font-size: 15px;
-	  margin: 5px 0px;
+	  margin: 5px 0;
 	  font-weight: 600;
 	  color: #333;
 	}

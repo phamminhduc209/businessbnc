@@ -47,11 +47,7 @@ body {
       font-size: 14px;
       cursor: text;
       backface-visibility: hidden;
-      -webkit-transition: 0.2s ease-out;
-      -moz-transition: 0.2s ease-out;
-      -o-transition: 0.2s ease-out;
-      -ms-transition: 0.2s ease-out;
-      transition: 0.2s ease-out;
+      @include transition(all, 0.2s, ease-out);
       &.active {
         font-size: 11px;
         @include translate3d(0, -140%, 0);
@@ -184,8 +180,7 @@ body {
       @include border-radius(0);
       @include box-sizing(content-box);
       @include transition(all, .3s);
-      height: 3rem;
-      width: 100%;
+      @include size(100%,3rem);
       font-size: 1rem;
       margin: 0 0 15px 0;
       padding: 0;
