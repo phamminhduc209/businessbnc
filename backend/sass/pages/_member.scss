@@ -62,7 +62,7 @@
     @include transition(all, .3s);
     @include opacity(0);
     @include gradient(#333, #333);
-    z-index: 9;
+    z-index: 999;
     visibility: hidden;
   }
   & .ShowDetailAccHome {
