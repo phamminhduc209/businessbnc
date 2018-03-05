@@ -30,6 +30,7 @@
   }
   & .block-garpMain {
     font-size: 12px;
+    line-height: 1;
     font-weight: bold;
     position: relative;
   }
@@ -41,12 +42,10 @@
   & .img-npp {
     color: #423D3A;
     font-size: 14px;
-    height: 13px;
     font-weight: bold;
   }
   & .name-npp {
     color: #3c763d;
-    height: 15px;
     vertical-align: bottom;
     font-weight: normal;
     font-size: 13px;
@@ -160,4 +159,47 @@
       }
     }
   }
+}
+
+@media (max-width: 414px) {
+  .block-tree {
+    position: relative;
+    & ul {
+      & a {
+        & img {
+          height: 20px;
+        }
+      }
+    }
+    & .img-level2 {
+      & img {
+        @include size(30px,30px);
+      }
+    }
+    & .img-npp {
+      font-size: 10px;
+      margin-top: 5px;
+    }
+    & .name-npp {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .block-tree {
+    position: relative;
+    & ul {
+      & a {
+        padding: 0;
+        text-decoration: none;
+        color: #01011F;
+        font-family: arial, verdana, tahoma;
+        font-size: 11px;
+        display: inline-block;
+        @include transition(all, 0.5s);
+        @include border-radius(5px);
+      }
+    }
+}
 }
