@@ -17,8 +17,7 @@
 			@include size (160px,auto);
 			margin-right: 30px;
 			& img {
-				width: 160px;
-				height: 160px;
+				@include size (160px,160px);
 			}
 		}
 		& .info {
@@ -40,7 +39,154 @@
 	}
 }
 
+@media (max-width: 1024px) and (min-width: 993px) {
+	.block-search-member {
+		& .item {
+			padding: 10px;
+			& .icon {
+				@include size (135px,auto);
+				margin-right: 15px;
+				& img {
+					@include size (135px,135px);
+				}
+			}
+			& .info {
+				@include calc(width, '100% - 150px');
+				& ul {
+					& li {
+						margin-bottom: 5px;
+						& .name,
+						& .username,
+						& .mysponsor,
+						& .supporter {
+							margin-bottom: 5px;
+						}
+						& span:last-child {
+						    overflow: hidden;
+						    text-overflow: ellipsis;
+						    display: block;
+						    width: 100%;
+						    @include size (100,15px);
+						    white-space: nowrap;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+	.block-search-member {
+		& .item {
+			& .icon {
+				@include size (100%,auto);
+				margin-right: 0;
+				margin-bottom: 10px;
+				& img {
+				    @include size (135px,135px);
+				    margin: 0 auto;
+				    display: block;
+				}
+			}
+			& .info {
+				@include calc(width, '100% - 0px');
+				text-align: center;
+				& ul {
+					& li {
+						&:before,
+						&:after {
+							content: "";
+							display: table;
+						}
+						&:after {
+							clear: both;
+						}
+						margin-bottom: 5px;
+						& .name,
+						& .username,
+						& .mysponsor,
+						& .supporter {
+							margin-bottom: 5px;
+						}
+						& span:first-child {
+							float: left;
+						    width: 80px;
+						    margin-right: 5px;
+						    text-align: right;
+						}
+						& span:last-child {
+							float: left;
+						    text-align: left;
+						    @include calc(width, '100% - 85px');
+						    overflow: hidden;
+						    text-overflow: ellipsis;
+						    display: block;
+						    white-space: nowrap;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+	.block-search-member {
+		& .item {
+			& .icon {
+				@include size (135px,auto);
+				margin-right: 10px;
+				& img {
+					@include size (135px,135px);
+				}
+			}
+			& .info {
+				@include calc(width, '100% - 145px');
+			}
+		}
+	}
+}
+
 @media (max-width: 480px) {
+	.block-search-member {
+		& .item {
+			padding: 10px;
+			& .icon {
+				@include size (135px,auto);
+				margin-right: 15px;
+				& img {
+					@include size (135px,135px);
+				}
+			}
+			& .info {
+				@include calc(width, '100% - 150px');
+				& ul {
+					& li {
+						margin-bottom: 5px;
+						& .name,
+						& .username,
+						& .mysponsor,
+						& .supporter {
+							margin-bottom: 5px;
+						}
+						& span:last-child {
+						    overflow: hidden;
+						    text-overflow: ellipsis;
+						    display: block;
+						    width: 100%;
+						    @include size (100,15px);
+						    white-space: nowrap;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 414px) {
 	.block-search-member {
 		margin-top: 20px;
 		& .col-xs-12:last-child {
@@ -54,8 +200,9 @@
 				margin-right: 0;
 				margin-bottom: 15px;
 				& img {
-					width: 100%;
-					height: auto;
+					display: block;
+					margin: 0 auto;
+					@include size (135px,135px);
 				}
 			}
 			& .info {
