@@ -1,4 +1,13 @@
 /* Menber - Tree */
+.block-search {
+  & .input-group-btn {
+    & .btn {
+      & i.fa {
+        margin-right: 5px;
+      }
+    }
+  }
+}
 .block-tree {
   position: relative;
   & ul {
@@ -40,6 +49,7 @@
     }
   }
   & .img-npp {
+    margin-top: 5px;
     color: #423D3A;
     font-size: 14px;
     font-weight: bold;

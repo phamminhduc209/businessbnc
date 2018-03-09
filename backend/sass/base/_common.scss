@@ -74,6 +74,13 @@
   .skin-red-light {
     .block-main-header {
     & .navbar {
+      & .dropdown-menu {
+        & li {
+          & a {
+            color: #777;
+          }
+        }
+      }
       & .navbar-custom-menu {
         & .navbar-nav {
             & .user-menu {
@@ -142,6 +149,9 @@
 .box-title {
   font-weight: 400;
   font-size: 15px;
+  & i.fa {
+    margin-right: 5px;
+  }
 }
 .line {
   margin: 10px 0px;
